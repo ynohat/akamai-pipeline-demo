@@ -1,0 +1,73 @@
+{
+    "rules": {
+        "name": "default",
+        "children": [],
+        "behaviors": [
+            {
+                "name": "origin",
+                "options": {
+                    "originType": "NET_STORAGE",
+                    "netStorage": "${env.netStorageInfo}"
+                }
+            },
+            {
+                "name": "baseDirectory",
+                "options": {
+                    "value": "/demo/{{builtin.AK_HOST}}"
+                }
+            },
+            {
+                "name": "cacheKeyQueryParams",
+                "options": {
+                    "behavior": "IGNORE_ALL"
+                }
+            },
+            {
+                "name": "caching",
+                "options": {
+                    "behavior": "MAX_AGE",
+                    "mustRevalidate": false,
+                    "ttl": "1h"
+                }
+            },
+            {
+                "name": "cacheError",
+                "options": {
+                    "enabled": true,
+                    "ttl": "30s",
+                    "preserveStale": true
+                }
+            },
+            {
+                "name": "autoDomainValidation",
+                "options": {
+                    "autodv": ""
+                }
+            },
+            {
+                "name": "cpCode",
+                "options": {
+                    "value": {
+                        "id": "${env.cpCode}"
+                    }
+                }
+            },
+            {
+                "name": "mPulse",
+                "options": {
+                    "apiKey": "RQGLX-L64DH-CF9FM-4PJUA-7Z8EQ",
+                    "bufferSize": "",
+                    "configOverride": "",
+                    "enabled": true,
+                    "requirePci": false,
+                    "titleOptional": ""
+                }
+            }
+        ],
+        "options": {
+            "is_secure": false
+        },
+        "variables": [],
+        "comments": "The behaviors in the Default Rule apply to all requests for the property hostname(s) unless another rule overrides the Default Rule settings."
+    }
+}

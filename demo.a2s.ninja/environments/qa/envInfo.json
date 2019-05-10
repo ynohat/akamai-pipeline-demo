@@ -1,0 +1,18 @@
+{
+    "name": "qa",
+    "propertyName": "qa.demo.a2s.ninja",
+    "groupId": 125029,
+    "isSecure": false,
+    "propertyId": 542880,
+    "latestVersionInfo": {
+        "propertyVersion": 1,
+        "updatedByUser": "y6kqbjuuxapfrz3b",
+        "updatedDate": "2019-05-10T14:24:36Z",
+        "productionStatus": "INACTIVE",
+        "stagingStatus": "INACTIVE",
+        "etag": "9ee2ac3556f981933438a05b1935c400c97ff464",
+        "productId": "prd_SPM",
+        "ruleFormat": "latest"
+    },
+    "suggestedRuleFormat": "v2017-06-19"
+}

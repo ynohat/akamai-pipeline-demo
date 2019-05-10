@@ -1,0 +1,18 @@
+{
+    "name": "dev",
+    "propertyName": "dev.demo.a2s.ninja",
+    "groupId": 125029,
+    "isSecure": false,
+    "propertyId": 542879,
+    "latestVersionInfo": {
+        "propertyVersion": 1,
+        "updatedByUser": "y6kqbjuuxapfrz3b",
+        "updatedDate": "2019-05-10T14:24:33Z",
+        "productionStatus": "INACTIVE",
+        "stagingStatus": "INACTIVE",
+        "etag": "8549d86b1cde763ef50e0817640810d673f7ca79",
+        "productId": "prd_SPM",
+        "ruleFormat": "latest"
+    },
+    "suggestedRuleFormat": "v2017-06-19"
+}

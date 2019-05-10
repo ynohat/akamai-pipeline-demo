@@ -1,0 +1,8 @@
+[
+    {
+        "cnameFrom": "dev.demo.a2s.ninja",
+        "cnameTo": "dev.demo.a2s.ninja.edgesuite.net",
+        "cnameType": "EDGE_HOSTNAME",
+        "edgeHostnameId": null
+    }
+]

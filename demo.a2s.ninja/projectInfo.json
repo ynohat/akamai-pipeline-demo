@@ -1,0 +1,18 @@
+{
+    "productId": "prd_SPM",
+    "contractId": "C-1ED34DY",
+    "groupIds": [
+        125029
+    ],
+    "environments": [
+        "dev",
+        "qa",
+        "prod"
+    ],
+    "version": "0.5.1",
+    "isSecure": false,
+    "edgeGridConfig": {
+        "section": "a2s-open"
+    },
+    "name": "demo.a2s.ninja"
+}

@@ -1,0 +1,1119 @@
+[2019-05-10T16:24:11.542] [INFO] devops-prov.factory - Using credentials file: '/Users/ahogg/.edgerc', section: 'a2s-open'
+[2019-05-10T16:24:28.061] [INFO] devops-prov.factory - Using credentials file: '/Users/ahogg/.edgerc', section: 'a2s-open'
+[2019-05-10T16:24:28.066] [INFO] devops-prov - creating new project with info: {
+    "projectName": "demo.a2s.ninja",
+    "contractId": "C-1ED34DY",
+    "propertyId": 542877,
+    "groupIds": [
+        125029
+    ],
+    "environments": [
+        "dev",
+        "qa",
+        "prod"
+    ],
+    "environmentGroupIds": {
+        "dev": 125029,
+        "qa": 125029,
+        "prod": 125029
+    },
+    "isInRetryMode": false,
+    "variableMode": "default"
+}
+[2019-05-10T16:24:28.067] [INFO] devops-prov - Attempting to load rule tree for property id: 542877 and version: undefined
+[2019-05-10T16:24:28.067] [INFO] devops-prov.factory - need to create papi
+[2019-05-10T16:24:28.072] [INFO] devops-prov.openclient - Requesting: GET /papi/v0/properties/542877/versions/latest
+[2019-05-10T16:24:28.079] [INFO] devops-prov.edgegrid.auth - Unsigned authorization header: EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:28+0000;nonce=bcbb2ad9-59a8-4328-8743-cc213fa1b05b;
+
+[2019-05-10T16:24:28.080] [INFO] devops-prov.edgegrid.helpers - Body is ""
+[2019-05-10T16:24:28.080] [DEBUG] devops-prov.edgegrid.helpers - PREPARED BODY LENGTH 0
+[2019-05-10T16:24:28.080] [INFO] devops-prov.edgegrid.helpers - Data to sign: "GET	https	akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net	/papi/v0/properties/542877/versions/latest			EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:28+0000;nonce=bcbb2ad9-59a8-4328-8743-cc213fa1b05b;" 
+
+[2019-05-10T16:24:28.081] [INFO] devops-prov.edgegrid.helpers - Signing key: IXOQOvdQOj+RJA8vIE9mWa6DfaWUiw6vuZc0Ii4EaXw=
+
+[2019-05-10T16:24:28.081] [INFO] devops-prov.edgegrid.auth - Signed authorization header: EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:28+0000;nonce=bcbb2ad9-59a8-4328-8743-cc213fa1b05b;signature=ps6DiH9X2f9hCdMtvTrPt0rG17udayk16kVGvITFXSU=
+
+[2019-05-10T16:24:28.109] [INFO] devops-prov.edgegrid - request { debugId: 1,
+  uri:
+   'https://akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net/papi/v0/properties/542877/versions/latest',
+  method: 'GET',
+  headers:
+   { 'X-User-Agent': 'Akamai-PD; Version=0.5.1',
+     Authorization:
+      'EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:28+0000;nonce=bcbb2ad9-59a8-4328-8743-cc213fa1b05b;signature=ps6DiH9X2f9hCdMtvTrPt0rG17udayk16kVGvITFXSU=',
+     host: 'akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net' } }
+[2019-05-10T16:24:29.892] [INFO] devops-prov.edgegrid - response { debugId: 1,
+  headers:
+   { 'papi-cache-status': 'CACHE_MISS',
+     location:
+      'https://akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net/papi/v0/properties/prp_542877/versions/1',
+     vary: 'Accept-Encoding',
+     'content-type': 'application/json;charset=UTF-8',
+     'x-trace-id': '403e5cd5899d4096',
+     'content-length': '65',
+     date: 'Fri, 10 May 2019 14:24:29 GMT',
+     connection: 'close' },
+  statusCode: 302,
+  body:
+   '{\n  "versionLink" : "/papi/v0/properties/prp_542877/versions/1"\n}' }
+[2019-05-10T16:24:29.894] [INFO] devops-prov.edgegrid.auth - Unsigned authorization header: EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:29+0000;nonce=9dbb8832-5b77-44e3-abf6-0ebe059b47e3;
+
+[2019-05-10T16:24:29.894] [INFO] devops-prov.edgegrid.helpers - Body is ""
+[2019-05-10T16:24:29.894] [DEBUG] devops-prov.edgegrid.helpers - PREPARED BODY LENGTH 0
+[2019-05-10T16:24:29.894] [INFO] devops-prov.edgegrid.helpers - Data to sign: "GET	https	akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net	/papi/v0/properties/prp_542877/versions/1			EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:29+0000;nonce=9dbb8832-5b77-44e3-abf6-0ebe059b47e3;" 
+
+[2019-05-10T16:24:29.894] [INFO] devops-prov.edgegrid.helpers - Signing key: kS5augfQlOxS7uQwkyqBJq7+rldsipIdE8pucZI7Pe8=
+
+[2019-05-10T16:24:29.894] [INFO] devops-prov.edgegrid.auth - Signed authorization header: EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:29+0000;nonce=9dbb8832-5b77-44e3-abf6-0ebe059b47e3;signature=iRokL2omht4Yl6eToiUira8VmnYOQGSJSz8FJ0mmlNw=
+
+[2019-05-10T16:24:29.899] [INFO] devops-prov.edgegrid - request { debugId: 2,
+  uri:
+   'https://akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net/papi/v0/properties/prp_542877/versions/1',
+  method: 'GET',
+  headers:
+   { 'X-User-Agent': 'Akamai-PD; Version=0.5.1',
+     Authorization:
+      'EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:29+0000;nonce=9dbb8832-5b77-44e3-abf6-0ebe059b47e3;signature=iRokL2omht4Yl6eToiUira8VmnYOQGSJSz8FJ0mmlNw=',
+     host: 'akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net' } }
+[2019-05-10T16:24:30.104] [INFO] devops-prov.edgegrid - response { debugId: 2,
+  headers:
+   { 'papi-cache-status': 'CACHE_MISS',
+     location:
+      'https://akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net/papi/v0/properties/542877/versions/1?groupId=125029&contractId=C-1ED34DY',
+     vary: 'Accept-Encoding',
+     'content-type': 'application/json;charset=UTF-8',
+     'x-trace-id': '403e5cd5899d40b6',
+     'content-length': '98',
+     date: 'Fri, 10 May 2019 14:24:30 GMT',
+     connection: 'close' },
+  statusCode: 302,
+  body:
+   '{\n  "redirectLink" : "/papi/v0/properties/542877/versions/1?groupId=125029&contractId=C-1ED34DY"\n}' }
+[2019-05-10T16:24:30.105] [INFO] devops-prov.edgegrid.auth - Unsigned authorization header: EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:30+0000;nonce=046dca17-a20d-4583-b98a-23bbe848cfff;
+
+[2019-05-10T16:24:30.105] [INFO] devops-prov.edgegrid.helpers - Body is ""
+[2019-05-10T16:24:30.105] [DEBUG] devops-prov.edgegrid.helpers - PREPARED BODY LENGTH 0
+[2019-05-10T16:24:30.105] [INFO] devops-prov.edgegrid.helpers - Data to sign: "GET	https	akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net	/papi/v0/properties/542877/versions/1?groupId=125029&contractId=C-1ED34DY			EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:30+0000;nonce=046dca17-a20d-4583-b98a-23bbe848cfff;" 
+
+[2019-05-10T16:24:30.105] [INFO] devops-prov.edgegrid.helpers - Signing key: JK1gKv9U0035/6t+kE3NoKw6cBiZNGpHXCgcAHRDBo4=
+
+[2019-05-10T16:24:30.105] [INFO] devops-prov.edgegrid.auth - Signed authorization header: EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:30+0000;nonce=046dca17-a20d-4583-b98a-23bbe848cfff;signature=/meHCfCuUPP0gDqCz0wzcULh5A2RLup4BPT7AxTEVno=
+
+[2019-05-10T16:24:30.107] [INFO] devops-prov.edgegrid - request { debugId: 3,
+  uri:
+   'https://akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net/papi/v0/properties/542877/versions/1?groupId=125029&contractId=C-1ED34DY',
+  method: 'GET',
+  headers:
+   { 'X-User-Agent': 'Akamai-PD; Version=0.5.1',
+     Authorization:
+      'EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:30+0000;nonce=046dca17-a20d-4583-b98a-23bbe848cfff;signature=/meHCfCuUPP0gDqCz0wzcULh5A2RLup4BPT7AxTEVno=',
+     host: 'akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net' } }
+[2019-05-10T16:24:30.405] [INFO] devops-prov.edgegrid - response { debugId: 3,
+  headers:
+   { 'papi-cache-status': 'CACHE_MISS',
+     vary: 'Accept, Accept-Encoding',
+     'cache-control': 'no-store',
+     'content-type': 'application/json;charset=UTF-8',
+     'x-trace-id': '403e5cd5899e40c7',
+     'content-length': '551',
+     'x-n': 'S',
+     date: 'Fri, 10 May 2019 14:24:30 GMT',
+     connection: 'close' },
+  statusCode: 200,
+  body:
+   '{\n  "propertyId" : "prp_542877",\n  "propertyName" : "www.demo.a2s.ninja",\n  "accountId" : "act_B-C-1ED34DK",\n  "contractId" : "ctr_C-1ED34DY",\n  "groupId" : "grp_125029",\n  "assetId" : "aid_10676142",\n  "versions" : {\n    "items" : [ {\n      "propertyVersion" : 1,\n      "updatedByUser" : "ahogg",\n      "updatedDate" : "2019-05-10T14:20:57Z",\n      "productionStatus" : "PENDING",\n      "stagingStatus" : "INACTIVE",\n      "etag" : "15bc2e25c36c5be8eb0b97c621a7ccf9f8ab71da",\n      "productId" : "prd_SPM",\n      "ruleFormat" : "latest"\n    } ]\n  }\n}' }
+[2019-05-10T16:24:30.406] [INFO] devops-prov.openclient - Status code:  200
+[2019-05-10T16:24:30.406] [INFO] devops-prov.openclient - Body:  {
+  "propertyId" : "prp_542877",
+  "propertyName" : "www.demo.a2s.ninja",
+  "accountId" : "act_B-C-1ED34DK",
+  "contractId" : "ctr_C-1ED34DY",
+  "groupId" : "grp_125029",
+  "assetId" : "aid_10676142",
+  "versions" : {
+    "items" : [ {
+      "propertyVersion" : 1,
+      "updatedByUser" : "ahogg",
+      "updatedDate" : "2019-05-10T14:20:57Z",
+      "productionStatus" : "PENDING",
+      "stagingStatus" : "INACTIVE",
+      "etag" : "15bc2e25c36c5be8eb0b97c621a7ccf9f8ab71da",
+      "productId" : "prd_SPM",
+      "ruleFormat" : "latest"
+    } ]
+  }
+}
+[2019-05-10T16:24:30.407] [INFO] devops-prov.openclient - Requesting: GET /papi/v0/client-settings
+[2019-05-10T16:24:30.407] [INFO] devops-prov.edgegrid.auth - Unsigned authorization header: EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:30+0000;nonce=40de8f82-f695-44b5-900d-83e2f78f6251;
+
+[2019-05-10T16:24:30.408] [INFO] devops-prov.edgegrid.helpers - Body is ""
+[2019-05-10T16:24:30.408] [DEBUG] devops-prov.edgegrid.helpers - PREPARED BODY LENGTH 0
+[2019-05-10T16:24:30.408] [INFO] devops-prov.edgegrid.helpers - Data to sign: "GET	https	akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net	/papi/v0/client-settings			EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:30+0000;nonce=40de8f82-f695-44b5-900d-83e2f78f6251;" 
+
+[2019-05-10T16:24:30.408] [INFO] devops-prov.edgegrid.helpers - Signing key: JK1gKv9U0035/6t+kE3NoKw6cBiZNGpHXCgcAHRDBo4=
+
+[2019-05-10T16:24:30.408] [INFO] devops-prov.edgegrid.auth - Signed authorization header: EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:30+0000;nonce=40de8f82-f695-44b5-900d-83e2f78f6251;signature=VkTDw0ojvMC3j4w1s3njv7OY8MTW6JVzdOgxyChythw=
+
+[2019-05-10T16:24:30.409] [INFO] devops-prov.edgegrid - request { debugId: 4,
+  uri:
+   'https://akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net/papi/v0/client-settings',
+  method: 'GET',
+  headers:
+   { 'X-User-Agent': 'Akamai-PD; Version=0.5.1',
+     Authorization:
+      'EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:30+0000;nonce=40de8f82-f695-44b5-900d-83e2f78f6251;signature=VkTDw0ojvMC3j4w1s3njv7OY8MTW6JVzdOgxyChythw=',
+     host: 'akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net' } }
+[2019-05-10T16:24:30.658] [INFO] devops-prov.edgegrid - response { debugId: 4,
+  headers:
+   { 'papi-cache-status': 'CACHE_MISS',
+     'cache-control': 'no-store',
+     vary: 'Accept-Encoding',
+     'content-type': 'application/json;charset=UTF-8',
+     'x-trace-id': '403e5cd5899e40d3',
+     'content-length': '58',
+     date: 'Fri, 10 May 2019 14:24:30 GMT',
+     connection: 'close' },
+  statusCode: 200,
+  body:
+   '{\n  "ruleFormat" : "v2017-06-19",\n  "usePrefixes" : true\n}' }
+[2019-05-10T16:24:30.659] [INFO] devops-prov.openclient - Status code:  200
+[2019-05-10T16:24:30.659] [INFO] devops-prov.openclient - Body:  {
+  "ruleFormat" : "v2017-06-19",
+  "usePrefixes" : true
+}
+[2019-05-10T16:24:30.659] [INFO] devops-prov.openclient - Requesting: GET /papi/v0/properties/542877/versions/1/rules
+[2019-05-10T16:24:30.659] [INFO] devops-prov.edgegrid.auth - Unsigned authorization header: EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:30+0000;nonce=e4f554a8-1815-408a-8272-cfd92ffe56ac;
+
+[2019-05-10T16:24:30.660] [INFO] devops-prov.edgegrid.helpers - Body is ""
+[2019-05-10T16:24:30.660] [DEBUG] devops-prov.edgegrid.helpers - PREPARED BODY LENGTH 0
+[2019-05-10T16:24:30.660] [INFO] devops-prov.edgegrid.helpers - Data to sign: "GET	https	akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net	/papi/v0/properties/542877/versions/1/rules			EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:30+0000;nonce=e4f554a8-1815-408a-8272-cfd92ffe56ac;" 
+
+[2019-05-10T16:24:30.660] [INFO] devops-prov.edgegrid.helpers - Signing key: JK1gKv9U0035/6t+kE3NoKw6cBiZNGpHXCgcAHRDBo4=
+
+[2019-05-10T16:24:30.660] [INFO] devops-prov.edgegrid.auth - Signed authorization header: EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:30+0000;nonce=e4f554a8-1815-408a-8272-cfd92ffe56ac;signature=6qB+ei3Wq6mmID2zQGOBe96ZHBCecMSWFfRKTeaRzdU=
+
+[2019-05-10T16:24:30.661] [INFO] devops-prov.edgegrid - request { debugId: 5,
+  uri:
+   'https://akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net/papi/v0/properties/542877/versions/1/rules',
+  method: 'GET',
+  headers:
+   { 'X-User-Agent': 'Akamai-PD; Version=0.5.1',
+     Accept: 'application/vnd.akamai.papirules.v2017-06-19+json',
+     Authorization:
+      'EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:30+0000;nonce=e4f554a8-1815-408a-8272-cfd92ffe56ac;signature=6qB+ei3Wq6mmID2zQGOBe96ZHBCecMSWFfRKTeaRzdU=',
+     host: 'akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net' } }
+[2019-05-10T16:24:30.861] [INFO] devops-prov.edgegrid - response { debugId: 5,
+  headers:
+   { 'papi-cache-status': 'CACHE_MISS',
+     location:
+      'https://akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net/papi/v0/properties/542877/versions/1/rules?groupId=125029&contractId=C-1ED34DY',
+     vary: 'Accept-Encoding',
+     'content-type': 'application/json;charset=UTF-8',
+     'x-trace-id': '403e5cd5899e40e9',
+     'content-length': '104',
+     date: 'Fri, 10 May 2019 14:24:30 GMT',
+     connection: 'close' },
+  statusCode: 302,
+  body:
+   '{\n  "redirectLink" : "/papi/v0/properties/542877/versions/1/rules?groupId=125029&contractId=C-1ED34DY"\n}' }
+[2019-05-10T16:24:30.862] [INFO] devops-prov.edgegrid.auth - Unsigned authorization header: EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:30+0000;nonce=9e2d5bb1-1cd9-4c3d-8deb-15368cab7f97;
+
+[2019-05-10T16:24:30.863] [INFO] devops-prov.edgegrid.helpers - Body is ""
+[2019-05-10T16:24:30.863] [DEBUG] devops-prov.edgegrid.helpers - PREPARED BODY LENGTH 0
+[2019-05-10T16:24:30.863] [INFO] devops-prov.edgegrid.helpers - Data to sign: "GET	https	akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net	/papi/v0/properties/542877/versions/1/rules?groupId=125029&contractId=C-1ED34DY			EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:30+0000;nonce=9e2d5bb1-1cd9-4c3d-8deb-15368cab7f97;" 
+
+[2019-05-10T16:24:30.863] [INFO] devops-prov.edgegrid.helpers - Signing key: JK1gKv9U0035/6t+kE3NoKw6cBiZNGpHXCgcAHRDBo4=
+
+[2019-05-10T16:24:30.863] [INFO] devops-prov.edgegrid.auth - Signed authorization header: EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:30+0000;nonce=9e2d5bb1-1cd9-4c3d-8deb-15368cab7f97;signature=AZApA8R2wO+uxFqa0wWBlFsre/sWu76T4RZsdh/qWRY=
+
+[2019-05-10T16:24:30.865] [INFO] devops-prov.edgegrid - request { debugId: 6,
+  uri:
+   'https://akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net/papi/v0/properties/542877/versions/1/rules?groupId=125029&contractId=C-1ED34DY',
+  method: 'GET',
+  headers:
+   { 'X-User-Agent': 'Akamai-PD; Version=0.5.1',
+     Accept: 'application/vnd.akamai.papirules.v2017-06-19+json',
+     Authorization:
+      'EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:30+0000;nonce=9e2d5bb1-1cd9-4c3d-8deb-15368cab7f97;signature=AZApA8R2wO+uxFqa0wWBlFsre/sWu76T4RZsdh/qWRY=',
+     host: 'akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net' } }
+[2019-05-10T16:24:31.765] [INFO] devops-prov.edgegrid - response { debugId: 6,
+  headers:
+   { 'papi-cache-status': 'CACHE_MISS',
+     'x-limit-elements-per-property-limit': '3000',
+     'x-limit-elements-per-property-remaining': '2992',
+     'x-limit-max-nested-rules-limit': '6',
+     'x-limit-max-nested-rules-remaining': '6',
+     'content-language': 'en-US',
+     link:
+      '<https://akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net/papi/v0/schemas/products/prd_SPM/v2017-06-19>; rel="describedby"',
+     etag: '"3023b7c763bfdd382269401cb2a394f1947c1422-gzip"',
+     vary: 'Accept-Encoding',
+     'content-type':
+      'application/vnd.akamai.papirules.v2017-06-19+json;charset=UTF-8',
+     'x-trace-id': '403e5cd5899e40ef',
+     'content-length': '3628',
+     date: 'Fri, 10 May 2019 14:24:31 GMT',
+     connection: 'close' },
+  statusCode: 200,
+  body:
+   '{\n  "accountId" : "act_B-C-1ED34DK",\n  "contractId" : "ctr_C-1ED34DY",\n  "groupId" : "grp_125029",\n  "propertyId" : "prp_542877",\n  "propertyName" : "www.demo.a2s.ninja",\n  "propertyVersion" : 1,\n  "etag" : "3023b7c763bfdd382269401cb2a394f1947c1422",\n  "rules" : {\n    "name" : "default",\n    "children" : [ ],\n    "behaviors" : [ {\n      "name" : "origin",\n      "options" : {\n        "originType" : "NET_STORAGE",\n        "netStorage" : {\n          "downloadDomainName" : "ahogg.download.akamai.com",\n          "cpCode" : 479318,\n          "g2oToken" : null\n        }\n      }\n    }, {\n      "name" : "baseDirectory",\n      "options" : {\n        "value" : "/demo/{{builtin.AK_HOST}}"\n      }\n    }, {\n      "name" : "cacheKeyQueryParams",\n      "options" : {\n        "behavior" : "IGNORE_ALL"\n      }\n    }, {\n      "name" : "caching",\n      "options" : {\n        "behavior" : "MAX_AGE",\n        "mustRevalidate" : false,\n        "ttl" : "1h"\n      }\n    }, {\n      "name" : "cacheError",\n      "options" : {\n        "enabled" : true,\n        "ttl" : "30s",\n        "preserveStale" : true\n      }\n    }, {\n      "name" : "autoDomainValidation",\n      "options" : {\n        "autodv" : ""\n      }\n    }, {\n      "name" : "cpCode",\n      "options" : {\n        "value" : {\n          "id" : 849694,\n          "description" : "www.demo.a2s.ninja",\n          "products" : [ "SPM" ],\n          "createdDate" : 1.557496419E12,\n          "cpCodeLimits" : {\n            "limit" : 314,\n            "currentCapacity" : 30,\n            "limitType" : "account"\n          },\n          "name" : "www.demo.a2s.ninja"\n        }\n      }\n    }, {\n      "name" : "mPulse",\n      "options" : {\n        "apiKey" : "RQGLX-L64DH-CF9FM-4PJUA-7Z8EQ",\n        "bufferSize" : "",\n        "configOverride" : "",\n        "enabled" : true,\n        "requirePci" : false,\n        "titleOptional" : ""\n      }\n    } ],\n    "options" : {\n      "is_secure" : false\n    },\n    "variables" : [ ],\n    "comments" : "The behaviors in the Default Rule apply to all requests for the property hostname(s) unless another rule overrides the Default Rule settings."\n  },\n  "errors" : [ {\n    "type" : "https://problems.luna.akamaiapis.net/papi/v0/validation/unknown_feature",\n    "errorLocation" : "#/rules/behaviors/0",\n    "detail" : "The behavior \'`Origin Server`\' is not supported. Please remove this behavior so you may activate your property."\n  }, {\n    "type" : "https://problems.luna.akamaiapis.net/papi/v0/validation/unknown_feature",\n    "errorLocation" : "#/rules/behaviors/3",\n    "detail" : "The behavior \'`Caching`\' is not supported. Please remove this behavior so you may activate your property."\n  }, {\n    "type" : "https://problems.luna.akamaiapis.net/papi/v0/validation/unknown_feature",\n    "errorLocation" : "#/rules/behaviors/5",\n    "detail" : "The behavior \'`Auto Domain Validation`\' is not supported. Please remove this behavior so you may activate your property."\n  }, {\n    "type" : "https://problems.luna.akamaiapis.net/papi/v0/validation/unknown_feature",\n    "errorLocation" : "#/rules/behaviors/7",\n    "detail" : "The behavior \'`mPulse`\' is not supported. Please remove this behavior so you may activate your property."\n  } ],\n  "warnings" : [ {\n    "type" : "https://problems.luna.akamaiapis.net/papi/v0/validation/cannot_validate",\n    "errorLocation" : "#/rules/behaviors/1/options/value",\n    "detail" : "The input to option Base Path of `Origin Base Path` cannot be validated because of variable expression usage. Because of the use of variables, the value of the option is only known at runtime."\n  } ],\n  "ruleFormat" : "v2017-06-19"\n}' }
+[2019-05-10T16:24:31.765] [INFO] devops-prov.openclient - Status code:  200
+[2019-05-10T16:24:31.765] [INFO] devops-prov.openclient - Body:  {
+  "accountId" : "act_B-C-1ED34DK",
+  "contractId" : "ctr_C-1ED34DY",
+  "groupId" : "grp_125029",
+  "propertyId" : "prp_542877",
+  "propertyName" : "www.demo.a2s.ninja",
+  "propertyVersion" : 1,
+  "etag" : "3023b7c763bfdd382269401cb2a394f1947c1422",
+  "rules" : {
+    "name" : "default",
+    "children" : [ ],
+    "behaviors" : [ {
+      "name" : "origin",
+      "options" : {
+        "originType" : "NET_STORAGE",
+        "netStorage" : {
+          "downloadDomainName" : "ahogg.download.akamai.com",
+          "cpCode" : 479318,
+          "g2oToken" : null
+        }
+      }
+    }, {
+      "name" : "baseDirectory",
+      "options" : {
+        "value" : "/demo/{{builtin.AK_HOST}}"
+      }
+    }, {
+      "name" : "cacheKeyQueryParams",
+      "options" : {
+        "behavior" : "IGNORE_ALL"
+      }
+    }, {
+      "name" : "caching",
+      "options" : {
+        "behavior" : "MAX_AGE",
+        "mustRevalidate" : false,
+        "ttl" : "1h"
+      }
+    }, {
+      "name" : "cacheError",
+      "options" : {
+        "enabled" : true,
+        "ttl" : "30s",
+        "preserveStale" : true
+      }
+    }, {
+      "name" : "autoDomainValidation",
+      "options" : {
+        "autodv" : ""
+      }
+    }, {
+      "name" : "cpCode",
+      "options" : {
+        "value" : {
+          "id" : 849694,
+          "description" : "www.demo.a2s.ninja",
+          "products" : [ "SPM" ],
+          "createdDate" : 1.557496419E12,
+          "cpCodeLimits" : {
+            "limit" : 314,
+            "currentCapacity" : 30,
+            "limitType" : "account"
+          },
+          "name" : "www.demo.a2s.ninja"
+        }
+      }
+    }, {
+      "name" : "mPulse",
+      "options" : {
+        "apiKey" : "RQGLX-L64DH-CF9FM-4PJUA-7Z8EQ",
+        "bufferSize" : "",
+        "configOverride" : "",
+        "enabled" : true,
+        "requirePci" : false,
+        "titleOptional" : ""
+      }
+    } ],
+    "options" : {
+      "is_secure" : false
+    },
+    "variables" : [ ],
+    "comments" : "The behaviors in the Default Rule apply to all requests for the property hostname(s) unless another rule overrides the Default Rule settings."
+  },
+  "errors" : [ {
+    "type" : "https://problems.luna.akamaiapis.net/papi/v0/validation/unknown_feature",
+    "errorLocation" : "#/rules/behaviors/0",
+    "detail" : "The behavior '`Origin Server`' is not supported. Please remove this behavior so you may activate your property."
+  }, {
+    "type" : "https://problems.luna.akamaiapis.net/papi/v0/validation/unknown_feature",
+    "errorLocation" : "#/rules/behaviors/3",
+    "detail" : "The behavior '`Caching`' is not supported. Please remove this behavior so you may activate your property."
+  }, {
+    "type" : "https://problems.luna.akamaiapis.net/papi/v0/validation/unknown_feature",
+    "errorLocation" : "#/rules/behaviors/5",
+    "detail" : "The behavior '`Auto Domain Validation`' is not supported. Please remove this behavior so you may activate your property."
+  }, {
+    "type" : "https://problems.luna.akamaiapis.net/papi/v0/validation/unknown_feature",
+    "errorLocation" : "#/rules/behaviors/7",
+    "detail" : "The behavior '`mPulse`' is not supported. Please remove this behavior so you may activate your property."
+  } ],
+  "warnings" : [ {
+    "type" : "https://problems.luna.akamaiapis.net/papi/v0/validation/cannot_validate",
+    "errorLocation" : "#/rules/behaviors/1/options/value",
+    "detail" : "The input to option Base Path of `Origin Base Path` cannot be validated because of variable expression usage. Because of the use of variables, the value of the option is only known at runtime."
+  } ],
+  "ruleFormat" : "v2017-06-19"
+}
+[2019-05-10T16:24:31.766] [INFO] devops-prov - Creating new pipeline with data:  {
+    "projectName": "demo.a2s.ninja",
+    "productId": "prd_SPM",
+    "contractId": "C-1ED34DY",
+    "propertyId": 542877,
+    "groupIds": [
+        125029
+    ],
+    "propertyVersion": 1,
+    "environments": [
+        "dev",
+        "qa",
+        "prod"
+    ],
+    "environmentGroupIds": {
+        "dev": 125029,
+        "qa": 125029,
+        "prod": 125029
+    },
+    "isInRetryMode": false,
+    "variableMode": "default",
+    "secureOption": false
+}
+[2019-05-10T16:24:31.766] [INFO] devops-prov.project - creating pipeline /Users/ahogg/git/radiofrance-workshop/devops/demo/akamai-pipeline/demo.a2s.ninja, with environments: dev, qa, prod
+[2019-05-10T16:24:31.767] [INFO] devops-prov.utils - writing '/Users/ahogg/git/radiofrance-workshop/devops/demo/akamai-pipeline/demo.a2s.ninja/projectInfo.json'
+[2019-05-10T16:24:31.768] [INFO] devops-prov - Creating environment: 'dev'
+[2019-05-10T16:24:31.769] [INFO] devops-prov.utils - loading '/Users/ahogg/git/radiofrance-workshop/devops/demo/akamai-pipeline/demo.a2s.ninja/projectInfo.json'
+[2019-05-10T16:24:31.770] [INFO] devops-prov.project - Overriding edgegrid config with project default:  { section: 'a2s-open' }
+[2019-05-10T16:24:31.771] [INFO] devops-prov.envionment - creating property 'dev.demo.a2s.ninja' tied to environment 'dev'
+[2019-05-10T16:24:31.771] [INFO] devops-prov.openclient - Requesting: POST /papi/v0/properties?groupId=125029&contractId=C-1ED34DY
+[2019-05-10T16:24:31.774] [INFO] devops-prov.edgegrid.auth - Unsigned authorization header: EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:31+0000;nonce=53c6c5d1-bac7-4d1b-80e7-dd6a65437cbb;
+
+[2019-05-10T16:24:31.774] [INFO] devops-prov.edgegrid.helpers - Body is "{"productId":"prd_SPM","propertyName":"dev.demo.a2s.ninja","cloneFrom":{"propertyId":542877,"version":1,"copyHostnames":false}}"
+[2019-05-10T16:24:31.774] [DEBUG] devops-prov.edgegrid.helpers - PREPARED BODY LENGTH 127
+[2019-05-10T16:24:31.774] [INFO] devops-prov.edgegrid.helpers - Signing content: "{"productId":"prd_SPM","propertyName":"dev.demo.a2s.ninja","cloneFrom":{"propertyId":542877,"version":1,"copyHostnames":false}}"
+[2019-05-10T16:24:31.774] [DEBUG] devops-prov.edgegrid.helpers - PREPARED BODY {"productId":"prd_SPM","propertyName":"dev.demo.a2s.ninja","cloneFrom":{"propertyId":542877,"version":1,"copyHostnames":false}}
+[2019-05-10T16:24:31.776] [INFO] devops-prov.edgegrid.helpers - Content hash is "w/XTDbPR1Z7M+G8Kdp8LACBH852VE2v49ypkHcVKe5w="
+[2019-05-10T16:24:31.776] [INFO] devops-prov.edgegrid.helpers - Data to sign: "POST	https	akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net	/papi/v0/properties?groupId=125029&contractId=C-1ED34DY		w/XTDbPR1Z7M+G8Kdp8LACBH852VE2v49ypkHcVKe5w=	EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:31+0000;nonce=53c6c5d1-bac7-4d1b-80e7-dd6a65437cbb;" 
+
+[2019-05-10T16:24:31.777] [INFO] devops-prov.edgegrid.helpers - Signing key: YwXfwEzsRvRGyPDb9rvEMGyC7WCLEOwgSdTGeWNsd60=
+
+[2019-05-10T16:24:31.777] [INFO] devops-prov.edgegrid.auth - Signed authorization header: EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:31+0000;nonce=53c6c5d1-bac7-4d1b-80e7-dd6a65437cbb;signature=XGCya8wqD8xs67m83a+k1JKaEZMw4WLTiOs4xOOxbQU=
+
+[2019-05-10T16:24:31.781] [INFO] devops-prov.edgegrid - request { debugId: 7,
+  uri:
+   'https://akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net/papi/v0/properties?groupId=125029&contractId=C-1ED34DY',
+  method: 'POST',
+  headers:
+   { 'X-User-Agent': 'Akamai-PD; Version=0.5.1',
+     'Content-Type': 'application/json',
+     Authorization:
+      'EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:31+0000;nonce=53c6c5d1-bac7-4d1b-80e7-dd6a65437cbb;signature=XGCya8wqD8xs67m83a+k1JKaEZMw4WLTiOs4xOOxbQU=',
+     host: 'akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net',
+     'content-length': 127 },
+  body:
+   '{"productId":"prd_SPM","propertyName":"dev.demo.a2s.ninja","cloneFrom":{"propertyId":542877,"version":1,"copyHostnames":false}}' }
+[2019-05-10T16:24:34.082] [INFO] devops-prov.edgegrid - response { debugId: 7,
+  headers:
+   { 'papi-cache-status': 'CACHE_MISS',
+     location:
+      'https://akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net/papi/v0/properties/prp_542879?groupId=grp_125029&contractId=ctr_C-1ED34DY',
+     'x-limit-properties-per-contract-limit': '1000',
+     'x-limit-properties-per-contract-remaining': '795',
+     vary: 'Accept-Encoding',
+     'content-type': 'application/json;charset=UTF-8',
+     'x-trace-id': '403e5cd5899f4125',
+     'content-length': '99',
+     date: 'Fri, 10 May 2019 14:24:34 GMT',
+     connection: 'close' },
+  statusCode: 201,
+  body:
+   '{\n  "propertyLink" : "/papi/v0/properties/prp_542879?groupId=grp_125029&contractId=ctr_C-1ED34DY"\n}' }
+[2019-05-10T16:24:34.082] [INFO] devops-prov.openclient - Status code:  201
+[2019-05-10T16:24:34.082] [INFO] devops-prov.openclient - Body:  {
+  "propertyLink" : "/papi/v0/properties/prp_542879?groupId=grp_125029&contractId=ctr_C-1ED34DY"
+}
+[2019-05-10T16:24:34.082] [INFO] devops-prov.envionment - propData:  { propertyLink:
+   '/papi/v0/properties/prp_542879?groupId=grp_125029&contractId=ctr_C-1ED34DY' }
+[2019-05-10T16:24:34.083] [INFO] devops-prov.envionment - results:  [ '/papi/v0/properties/prp_542879?groupId=grp_125029&contractId=ctr_C-1ED34DY',
+  'prp_',
+  '542879',
+  index: 0,
+  input: '/papi/v0/properties/prp_542879?groupId=grp_125029&contractId=ctr_C-1ED34DY',
+  groups: undefined ]
+[2019-05-10T16:24:34.083] [INFO] devops-prov.envionment - Checking latest version of 'dev.demo.a2s.ninja'
+[2019-05-10T16:24:34.083] [INFO] devops-prov.openclient - Requesting: GET /papi/v0/properties/542879/versions/latest
+[2019-05-10T16:24:34.083] [INFO] devops-prov.edgegrid.auth - Unsigned authorization header: EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:34+0000;nonce=e3c78fc7-cb4b-4e7c-b23e-a6a243f36d44;
+
+[2019-05-10T16:24:34.086] [INFO] devops-prov.edgegrid.helpers - Body is ""
+[2019-05-10T16:24:34.086] [DEBUG] devops-prov.edgegrid.helpers - PREPARED BODY LENGTH 0
+[2019-05-10T16:24:34.086] [INFO] devops-prov.edgegrid.helpers - Data to sign: "GET	https	akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net	/papi/v0/properties/542879/versions/latest			EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:34+0000;nonce=e3c78fc7-cb4b-4e7c-b23e-a6a243f36d44;" 
+
+[2019-05-10T16:24:34.086] [INFO] devops-prov.edgegrid.helpers - Signing key: kRYRreAYZ+41ORArDDVMInzN2d5vQvyML2eMq2riQwY=
+
+[2019-05-10T16:24:34.086] [INFO] devops-prov.edgegrid.auth - Signed authorization header: EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:34+0000;nonce=e3c78fc7-cb4b-4e7c-b23e-a6a243f36d44;signature=1FIjGNXVt7BUv70ze2eMKtldB3FdYrAnjCAAY7AM3/0=
+
+[2019-05-10T16:24:34.087] [INFO] devops-prov.edgegrid - request { debugId: 8,
+  uri:
+   'https://akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net/papi/v0/properties/542879/versions/latest',
+  method: 'GET',
+  headers:
+   { 'X-User-Agent': 'Akamai-PD; Version=0.5.1',
+     Authorization:
+      'EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:34+0000;nonce=e3c78fc7-cb4b-4e7c-b23e-a6a243f36d44;signature=1FIjGNXVt7BUv70ze2eMKtldB3FdYrAnjCAAY7AM3/0=',
+     host: 'akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net' } }
+[2019-05-10T16:24:34.408] [INFO] devops-prov.edgegrid - response { debugId: 8,
+  headers:
+   { 'papi-cache-status': 'CACHE_MISS',
+     location:
+      'https://akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net/papi/v0/properties/prp_542879/versions/1',
+     vary: 'Accept-Encoding',
+     'content-type': 'application/json;charset=UTF-8',
+     'x-trace-id': '7a2f5cd589a14187',
+     'content-length': '65',
+     date: 'Fri, 10 May 2019 14:24:34 GMT',
+     connection: 'close' },
+  statusCode: 302,
+  body:
+   '{\n  "versionLink" : "/papi/v0/properties/prp_542879/versions/1"\n}' }
+[2019-05-10T16:24:34.409] [INFO] devops-prov.edgegrid.auth - Unsigned authorization header: EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:34+0000;nonce=70644168-a5ea-40d3-8414-91f6aad55003;
+
+[2019-05-10T16:24:34.409] [INFO] devops-prov.edgegrid.helpers - Body is ""
+[2019-05-10T16:24:34.409] [DEBUG] devops-prov.edgegrid.helpers - PREPARED BODY LENGTH 0
+[2019-05-10T16:24:34.409] [INFO] devops-prov.edgegrid.helpers - Data to sign: "GET	https	akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net	/papi/v0/properties/prp_542879/versions/1			EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:34+0000;nonce=70644168-a5ea-40d3-8414-91f6aad55003;" 
+
+[2019-05-10T16:24:34.409] [INFO] devops-prov.edgegrid.helpers - Signing key: kRYRreAYZ+41ORArDDVMInzN2d5vQvyML2eMq2riQwY=
+
+[2019-05-10T16:24:34.409] [INFO] devops-prov.edgegrid.auth - Signed authorization header: EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:34+0000;nonce=70644168-a5ea-40d3-8414-91f6aad55003;signature=5Ncv2EMR35eCDjxqIQH541YUHUAS+0maZFAIY/BeAn4=
+
+[2019-05-10T16:24:34.412] [INFO] devops-prov.edgegrid - request { debugId: 9,
+  uri:
+   'https://akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net/papi/v0/properties/prp_542879/versions/1',
+  method: 'GET',
+  headers:
+   { 'X-User-Agent': 'Akamai-PD; Version=0.5.1',
+     Authorization:
+      'EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:34+0000;nonce=70644168-a5ea-40d3-8414-91f6aad55003;signature=5Ncv2EMR35eCDjxqIQH541YUHUAS+0maZFAIY/BeAn4=',
+     host: 'akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net' } }
+[2019-05-10T16:24:34.637] [INFO] devops-prov.edgegrid - response { debugId: 9,
+  headers:
+   { 'papi-cache-status': 'CACHE_MISS',
+     location:
+      'https://akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net/papi/v0/properties/542879/versions/1?groupId=125029&contractId=C-1ED34DY',
+     vary: 'Accept-Encoding',
+     'content-type': 'application/json;charset=UTF-8',
+     'x-trace-id': '7a2f5cd589a241bd',
+     'content-length': '98',
+     date: 'Fri, 10 May 2019 14:24:34 GMT',
+     connection: 'close' },
+  statusCode: 302,
+  body:
+   '{\n  "redirectLink" : "/papi/v0/properties/542879/versions/1?groupId=125029&contractId=C-1ED34DY"\n}' }
+[2019-05-10T16:24:34.637] [INFO] devops-prov.edgegrid.auth - Unsigned authorization header: EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:34+0000;nonce=222a8e79-7cf8-417c-8a41-ef468645d8cf;
+
+[2019-05-10T16:24:34.637] [INFO] devops-prov.edgegrid.helpers - Body is ""
+[2019-05-10T16:24:34.637] [DEBUG] devops-prov.edgegrid.helpers - PREPARED BODY LENGTH 0
+[2019-05-10T16:24:34.637] [INFO] devops-prov.edgegrid.helpers - Data to sign: "GET	https	akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net	/papi/v0/properties/542879/versions/1?groupId=125029&contractId=C-1ED34DY			EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:34+0000;nonce=222a8e79-7cf8-417c-8a41-ef468645d8cf;" 
+
+[2019-05-10T16:24:34.637] [INFO] devops-prov.edgegrid.helpers - Signing key: kRYRreAYZ+41ORArDDVMInzN2d5vQvyML2eMq2riQwY=
+
+[2019-05-10T16:24:34.637] [INFO] devops-prov.edgegrid.auth - Signed authorization header: EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:34+0000;nonce=222a8e79-7cf8-417c-8a41-ef468645d8cf;signature=f+DRA0OfcuHYdaN1IBdza/sr1rvP2uMp5yVD0tYhO+8=
+
+[2019-05-10T16:24:34.639] [INFO] devops-prov.edgegrid - request { debugId: 10,
+  uri:
+   'https://akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net/papi/v0/properties/542879/versions/1?groupId=125029&contractId=C-1ED34DY',
+  method: 'GET',
+  headers:
+   { 'X-User-Agent': 'Akamai-PD; Version=0.5.1',
+     Authorization:
+      'EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:34+0000;nonce=222a8e79-7cf8-417c-8a41-ef468645d8cf;signature=f+DRA0OfcuHYdaN1IBdza/sr1rvP2uMp5yVD0tYhO+8=',
+     host: 'akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net' } }
+[2019-05-10T16:24:34.922] [INFO] devops-prov.edgegrid - response { debugId: 10,
+  headers:
+   { 'papi-cache-status': 'CACHE_MISS',
+     vary: 'Accept, Accept-Encoding',
+     'cache-control': 'no-store',
+     'content-type': 'application/json;charset=UTF-8',
+     'x-trace-id': '7a2f5cd589a241d1',
+     'content-length': '563',
+     'x-n': 'S',
+     date: 'Fri, 10 May 2019 14:24:34 GMT',
+     connection: 'close' },
+  statusCode: 200,
+  body:
+   '{\n  "propertyId" : "prp_542879",\n  "propertyName" : "dev.demo.a2s.ninja",\n  "accountId" : "act_B-C-1ED34DK",\n  "contractId" : "ctr_C-1ED34DY",\n  "groupId" : "grp_125029",\n  "assetId" : "aid_10676147",\n  "versions" : {\n    "items" : [ {\n      "propertyVersion" : 1,\n      "updatedByUser" : "y6kqbjuuxapfrz3b",\n      "updatedDate" : "2019-05-10T14:24:33Z",\n      "productionStatus" : "INACTIVE",\n      "stagingStatus" : "INACTIVE",\n      "etag" : "8549d86b1cde763ef50e0817640810d673f7ca79",\n      "productId" : "prd_SPM",\n      "ruleFormat" : "latest"\n    } ]\n  }\n}' }
+[2019-05-10T16:24:34.922] [INFO] devops-prov.openclient - Status code:  200
+[2019-05-10T16:24:34.922] [INFO] devops-prov.openclient - Body:  {
+  "propertyId" : "prp_542879",
+  "propertyName" : "dev.demo.a2s.ninja",
+  "accountId" : "act_B-C-1ED34DK",
+  "contractId" : "ctr_C-1ED34DY",
+  "groupId" : "grp_125029",
+  "assetId" : "aid_10676147",
+  "versions" : {
+    "items" : [ {
+      "propertyVersion" : 1,
+      "updatedByUser" : "y6kqbjuuxapfrz3b",
+      "updatedDate" : "2019-05-10T14:24:33Z",
+      "productionStatus" : "INACTIVE",
+      "stagingStatus" : "INACTIVE",
+      "etag" : "8549d86b1cde763ef50e0817640810d673f7ca79",
+      "productId" : "prd_SPM",
+      "ruleFormat" : "latest"
+    } ]
+  }
+}
+[2019-05-10T16:24:34.922] [INFO] devops-prov.envionment - envInfo:  { name: 'dev',
+  propertyName: 'dev.demo.a2s.ninja',
+  groupId: 125029,
+  isSecure: false,
+  propertyId: 542879,
+  latestVersionInfo:
+   { propertyVersion: 1,
+     updatedByUser: 'y6kqbjuuxapfrz3b',
+     updatedDate: '2019-05-10T14:24:33Z',
+     productionStatus: 'INACTIVE',
+     stagingStatus: 'INACTIVE',
+     etag: '8549d86b1cde763ef50e0817640810d673f7ca79',
+     productId: 'prd_SPM',
+     ruleFormat: 'latest' } }
+[2019-05-10T16:24:34.923] [INFO] devops-prov.utils - writing '/Users/ahogg/git/radiofrance-workshop/devops/demo/akamai-pipeline/demo.a2s.ninja/environments/dev/envInfo.json'
+[2019-05-10T16:24:34.924] [INFO] devops-prov.utils - writing '/Users/ahogg/git/radiofrance-workshop/devops/demo/akamai-pipeline/demo.a2s.ninja/environments/dev/hostnames.json'
+[2019-05-10T16:24:34.924] [INFO] devops-prov - Creating environment: 'qa'
+[2019-05-10T16:24:34.925] [INFO] devops-prov.envionment - creating property 'qa.demo.a2s.ninja' tied to environment 'qa'
+[2019-05-10T16:24:34.925] [INFO] devops-prov.openclient - Requesting: POST /papi/v0/properties?groupId=125029&contractId=C-1ED34DY
+[2019-05-10T16:24:34.925] [INFO] devops-prov.edgegrid.auth - Unsigned authorization header: EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:34+0000;nonce=9de86caf-0018-4fb8-985f-09096147cedf;
+
+[2019-05-10T16:24:34.925] [INFO] devops-prov.edgegrid.helpers - Body is "{"productId":"prd_SPM","propertyName":"qa.demo.a2s.ninja","cloneFrom":{"propertyId":542877,"version":1,"copyHostnames":false}}"
+[2019-05-10T16:24:34.925] [DEBUG] devops-prov.edgegrid.helpers - PREPARED BODY LENGTH 126
+[2019-05-10T16:24:34.925] [INFO] devops-prov.edgegrid.helpers - Signing content: "{"productId":"prd_SPM","propertyName":"qa.demo.a2s.ninja","cloneFrom":{"propertyId":542877,"version":1,"copyHostnames":false}}"
+[2019-05-10T16:24:34.925] [DEBUG] devops-prov.edgegrid.helpers - PREPARED BODY {"productId":"prd_SPM","propertyName":"qa.demo.a2s.ninja","cloneFrom":{"propertyId":542877,"version":1,"copyHostnames":false}}
+[2019-05-10T16:24:34.925] [INFO] devops-prov.edgegrid.helpers - Content hash is "NknJXSmvcGXy7TZy/EA0GbHsQyConcyL180pgCzOOAU="
+[2019-05-10T16:24:34.925] [INFO] devops-prov.edgegrid.helpers - Data to sign: "POST	https	akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net	/papi/v0/properties?groupId=125029&contractId=C-1ED34DY		NknJXSmvcGXy7TZy/EA0GbHsQyConcyL180pgCzOOAU=	EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:34+0000;nonce=9de86caf-0018-4fb8-985f-09096147cedf;" 
+
+[2019-05-10T16:24:34.926] [INFO] devops-prov.edgegrid.helpers - Signing key: kRYRreAYZ+41ORArDDVMInzN2d5vQvyML2eMq2riQwY=
+
+[2019-05-10T16:24:34.926] [INFO] devops-prov.edgegrid.auth - Signed authorization header: EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:34+0000;nonce=9de86caf-0018-4fb8-985f-09096147cedf;signature=lmoaWa/UeGila7l4zyRUW7f+3vAHl0aqcuEfkPjZ5sg=
+
+[2019-05-10T16:24:34.927] [INFO] devops-prov.edgegrid - request { debugId: 11,
+  uri:
+   'https://akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net/papi/v0/properties?groupId=125029&contractId=C-1ED34DY',
+  method: 'POST',
+  headers:
+   { 'X-User-Agent': 'Akamai-PD; Version=0.5.1',
+     'Content-Type': 'application/json',
+     Authorization:
+      'EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:34+0000;nonce=9de86caf-0018-4fb8-985f-09096147cedf;signature=lmoaWa/UeGila7l4zyRUW7f+3vAHl0aqcuEfkPjZ5sg=',
+     host: 'akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net',
+     'content-length': 126 },
+  body:
+   '{"productId":"prd_SPM","propertyName":"qa.demo.a2s.ninja","cloneFrom":{"propertyId":542877,"version":1,"copyHostnames":false}}' }
+[2019-05-10T16:24:36.637] [INFO] devops-prov.edgegrid - response { debugId: 11,
+  headers:
+   { 'papi-cache-status': 'CACHE_MISS',
+     location:
+      'https://akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net/papi/v0/properties/prp_542880?groupId=grp_125029&contractId=ctr_C-1ED34DY',
+     'x-limit-properties-per-contract-limit': '1000',
+     'x-limit-properties-per-contract-remaining': '795',
+     vary: 'Accept-Encoding',
+     'content-type': 'application/json;charset=UTF-8',
+     'x-trace-id': '7a2f5cd589a241e3',
+     'content-length': '99',
+     date: 'Fri, 10 May 2019 14:24:36 GMT',
+     connection: 'close' },
+  statusCode: 201,
+  body:
+   '{\n  "propertyLink" : "/papi/v0/properties/prp_542880?groupId=grp_125029&contractId=ctr_C-1ED34DY"\n}' }
+[2019-05-10T16:24:36.637] [INFO] devops-prov.openclient - Status code:  201
+[2019-05-10T16:24:36.637] [INFO] devops-prov.openclient - Body:  {
+  "propertyLink" : "/papi/v0/properties/prp_542880?groupId=grp_125029&contractId=ctr_C-1ED34DY"
+}
+[2019-05-10T16:24:36.638] [INFO] devops-prov.envionment - propData:  { propertyLink:
+   '/papi/v0/properties/prp_542880?groupId=grp_125029&contractId=ctr_C-1ED34DY' }
+[2019-05-10T16:24:36.638] [INFO] devops-prov.envionment - results:  [ '/papi/v0/properties/prp_542880?groupId=grp_125029&contractId=ctr_C-1ED34DY',
+  'prp_',
+  '542880',
+  index: 0,
+  input: '/papi/v0/properties/prp_542880?groupId=grp_125029&contractId=ctr_C-1ED34DY',
+  groups: undefined ]
+[2019-05-10T16:24:36.638] [INFO] devops-prov.envionment - Checking latest version of 'qa.demo.a2s.ninja'
+[2019-05-10T16:24:36.638] [INFO] devops-prov.openclient - Requesting: GET /papi/v0/properties/542880/versions/latest
+[2019-05-10T16:24:36.638] [INFO] devops-prov.edgegrid.auth - Unsigned authorization header: EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:36+0000;nonce=0ceb182a-3486-4180-84f1-d3a991b3c77e;
+
+[2019-05-10T16:24:36.638] [INFO] devops-prov.edgegrid.helpers - Body is ""
+[2019-05-10T16:24:36.639] [DEBUG] devops-prov.edgegrid.helpers - PREPARED BODY LENGTH 0
+[2019-05-10T16:24:36.639] [INFO] devops-prov.edgegrid.helpers - Data to sign: "GET	https	akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net	/papi/v0/properties/542880/versions/latest			EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:36+0000;nonce=0ceb182a-3486-4180-84f1-d3a991b3c77e;" 
+
+[2019-05-10T16:24:36.639] [INFO] devops-prov.edgegrid.helpers - Signing key: Nw6NzWbYgQKy9tZDpk6gcc6lVX44EX4m3lhkP1z3bzE=
+
+[2019-05-10T16:24:36.639] [INFO] devops-prov.edgegrid.auth - Signed authorization header: EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:36+0000;nonce=0ceb182a-3486-4180-84f1-d3a991b3c77e;signature=G7XeZ2Shnx1bvZkTG0mnPCtVr730Cp8yt4QV73AfdUA=
+
+[2019-05-10T16:24:36.640] [INFO] devops-prov.edgegrid - request { debugId: 12,
+  uri:
+   'https://akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net/papi/v0/properties/542880/versions/latest',
+  method: 'GET',
+  headers:
+   { 'X-User-Agent': 'Akamai-PD; Version=0.5.1',
+     Authorization:
+      'EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:36+0000;nonce=0ceb182a-3486-4180-84f1-d3a991b3c77e;signature=G7XeZ2Shnx1bvZkTG0mnPCtVr730Cp8yt4QV73AfdUA=',
+     host: 'akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net' } }
+[2019-05-10T16:24:36.977] [INFO] devops-prov.edgegrid - response { debugId: 12,
+  headers:
+   { 'papi-cache-status': 'CACHE_MISS',
+     location:
+      'https://akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net/papi/v0/properties/prp_542880/versions/1',
+     vary: 'Accept-Encoding',
+     'content-type': 'application/json;charset=UTF-8',
+     'x-trace-id': '7a2f5cd589a44277',
+     'content-length': '65',
+     date: 'Fri, 10 May 2019 14:24:36 GMT',
+     connection: 'close' },
+  statusCode: 302,
+  body:
+   '{\n  "versionLink" : "/papi/v0/properties/prp_542880/versions/1"\n}' }
+[2019-05-10T16:24:36.978] [INFO] devops-prov.edgegrid.auth - Unsigned authorization header: EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:36+0000;nonce=fb0971b7-7b0a-41db-a88d-d1255ad55c02;
+
+[2019-05-10T16:24:36.978] [INFO] devops-prov.edgegrid.helpers - Body is ""
+[2019-05-10T16:24:36.978] [DEBUG] devops-prov.edgegrid.helpers - PREPARED BODY LENGTH 0
+[2019-05-10T16:24:36.978] [INFO] devops-prov.edgegrid.helpers - Data to sign: "GET	https	akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net	/papi/v0/properties/prp_542880/versions/1			EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:36+0000;nonce=fb0971b7-7b0a-41db-a88d-d1255ad55c02;" 
+
+[2019-05-10T16:24:36.978] [INFO] devops-prov.edgegrid.helpers - Signing key: Nw6NzWbYgQKy9tZDpk6gcc6lVX44EX4m3lhkP1z3bzE=
+
+[2019-05-10T16:24:36.978] [INFO] devops-prov.edgegrid.auth - Signed authorization header: EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:36+0000;nonce=fb0971b7-7b0a-41db-a88d-d1255ad55c02;signature=kvKFkeLcEBs/IS32eN09qf00QOjbwaFIVS6Dg9LrZq4=
+
+[2019-05-10T16:24:36.980] [INFO] devops-prov.edgegrid - request { debugId: 13,
+  uri:
+   'https://akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net/papi/v0/properties/prp_542880/versions/1',
+  method: 'GET',
+  headers:
+   { 'X-User-Agent': 'Akamai-PD; Version=0.5.1',
+     Authorization:
+      'EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:36+0000;nonce=fb0971b7-7b0a-41db-a88d-d1255ad55c02;signature=kvKFkeLcEBs/IS32eN09qf00QOjbwaFIVS6Dg9LrZq4=',
+     host: 'akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net' } }
+[2019-05-10T16:24:37.178] [INFO] devops-prov.edgegrid - response { debugId: 13,
+  headers:
+   { 'papi-cache-status': 'CACHE_MISS',
+     location:
+      'https://akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net/papi/v0/properties/542880/versions/1?groupId=125029&contractId=C-1ED34DY',
+     vary: 'Accept-Encoding',
+     'content-type': 'application/json;charset=UTF-8',
+     'x-trace-id': '7a2f5cd589a44293',
+     'content-length': '98',
+     date: 'Fri, 10 May 2019 14:24:37 GMT',
+     connection: 'close' },
+  statusCode: 302,
+  body:
+   '{\n  "redirectLink" : "/papi/v0/properties/542880/versions/1?groupId=125029&contractId=C-1ED34DY"\n}' }
+[2019-05-10T16:24:37.179] [INFO] devops-prov.edgegrid.auth - Unsigned authorization header: EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:37+0000;nonce=9ad0294b-fbfe-46bb-a172-22a7391ac509;
+
+[2019-05-10T16:24:37.179] [INFO] devops-prov.edgegrid.helpers - Body is ""
+[2019-05-10T16:24:37.179] [DEBUG] devops-prov.edgegrid.helpers - PREPARED BODY LENGTH 0
+[2019-05-10T16:24:37.179] [INFO] devops-prov.edgegrid.helpers - Data to sign: "GET	https	akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net	/papi/v0/properties/542880/versions/1?groupId=125029&contractId=C-1ED34DY			EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:37+0000;nonce=9ad0294b-fbfe-46bb-a172-22a7391ac509;" 
+
+[2019-05-10T16:24:37.179] [INFO] devops-prov.edgegrid.helpers - Signing key: qEdTgEXUs0b3izdh1+pzBx1I245p7WvZBARRKaWpKRU=
+
+[2019-05-10T16:24:37.179] [INFO] devops-prov.edgegrid.auth - Signed authorization header: EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:37+0000;nonce=9ad0294b-fbfe-46bb-a172-22a7391ac509;signature=D7NwH51fv0PLfUjKDxSZrgzRrzRwoKaJGes4EiC+Boc=
+
+[2019-05-10T16:24:37.181] [INFO] devops-prov.edgegrid - request { debugId: 14,
+  uri:
+   'https://akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net/papi/v0/properties/542880/versions/1?groupId=125029&contractId=C-1ED34DY',
+  method: 'GET',
+  headers:
+   { 'X-User-Agent': 'Akamai-PD; Version=0.5.1',
+     Authorization:
+      'EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:37+0000;nonce=9ad0294b-fbfe-46bb-a172-22a7391ac509;signature=D7NwH51fv0PLfUjKDxSZrgzRrzRwoKaJGes4EiC+Boc=',
+     host: 'akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net' } }
+[2019-05-10T16:24:37.470] [INFO] devops-prov.edgegrid - response { debugId: 14,
+  headers:
+   { 'papi-cache-status': 'CACHE_MISS',
+     vary: 'Accept, Accept-Encoding',
+     'cache-control': 'no-store',
+     'content-type': 'application/json;charset=UTF-8',
+     'x-trace-id': '794b5cd589a542ad',
+     'content-length': '562',
+     'x-n': 'S',
+     date: 'Fri, 10 May 2019 14:24:37 GMT',
+     connection: 'close' },
+  statusCode: 200,
+  body:
+   '{\n  "propertyId" : "prp_542880",\n  "propertyName" : "qa.demo.a2s.ninja",\n  "accountId" : "act_B-C-1ED34DK",\n  "contractId" : "ctr_C-1ED34DY",\n  "groupId" : "grp_125029",\n  "assetId" : "aid_10676148",\n  "versions" : {\n    "items" : [ {\n      "propertyVersion" : 1,\n      "updatedByUser" : "y6kqbjuuxapfrz3b",\n      "updatedDate" : "2019-05-10T14:24:36Z",\n      "productionStatus" : "INACTIVE",\n      "stagingStatus" : "INACTIVE",\n      "etag" : "9ee2ac3556f981933438a05b1935c400c97ff464",\n      "productId" : "prd_SPM",\n      "ruleFormat" : "latest"\n    } ]\n  }\n}' }
+[2019-05-10T16:24:37.471] [INFO] devops-prov.openclient - Status code:  200
+[2019-05-10T16:24:37.471] [INFO] devops-prov.openclient - Body:  {
+  "propertyId" : "prp_542880",
+  "propertyName" : "qa.demo.a2s.ninja",
+  "accountId" : "act_B-C-1ED34DK",
+  "contractId" : "ctr_C-1ED34DY",
+  "groupId" : "grp_125029",
+  "assetId" : "aid_10676148",
+  "versions" : {
+    "items" : [ {
+      "propertyVersion" : 1,
+      "updatedByUser" : "y6kqbjuuxapfrz3b",
+      "updatedDate" : "2019-05-10T14:24:36Z",
+      "productionStatus" : "INACTIVE",
+      "stagingStatus" : "INACTIVE",
+      "etag" : "9ee2ac3556f981933438a05b1935c400c97ff464",
+      "productId" : "prd_SPM",
+      "ruleFormat" : "latest"
+    } ]
+  }
+}
+[2019-05-10T16:24:37.471] [INFO] devops-prov.envionment - envInfo:  { name: 'qa',
+  propertyName: 'qa.demo.a2s.ninja',
+  groupId: 125029,
+  isSecure: false,
+  propertyId: 542880,
+  latestVersionInfo:
+   { propertyVersion: 1,
+     updatedByUser: 'y6kqbjuuxapfrz3b',
+     updatedDate: '2019-05-10T14:24:36Z',
+     productionStatus: 'INACTIVE',
+     stagingStatus: 'INACTIVE',
+     etag: '9ee2ac3556f981933438a05b1935c400c97ff464',
+     productId: 'prd_SPM',
+     ruleFormat: 'latest' } }
+[2019-05-10T16:24:37.471] [INFO] devops-prov.utils - writing '/Users/ahogg/git/radiofrance-workshop/devops/demo/akamai-pipeline/demo.a2s.ninja/environments/qa/envInfo.json'
+[2019-05-10T16:24:37.472] [INFO] devops-prov.utils - writing '/Users/ahogg/git/radiofrance-workshop/devops/demo/akamai-pipeline/demo.a2s.ninja/environments/qa/hostnames.json'
+[2019-05-10T16:24:37.473] [INFO] devops-prov - Creating environment: 'prod'
+[2019-05-10T16:24:37.473] [INFO] devops-prov.envionment - creating property 'prod.demo.a2s.ninja' tied to environment 'prod'
+[2019-05-10T16:24:37.473] [INFO] devops-prov.openclient - Requesting: POST /papi/v0/properties?groupId=125029&contractId=C-1ED34DY
+[2019-05-10T16:24:37.473] [INFO] devops-prov.edgegrid.auth - Unsigned authorization header: EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:37+0000;nonce=4cd5f9c3-5de8-48e3-a4b6-5f5925c49405;
+
+[2019-05-10T16:24:37.473] [INFO] devops-prov.edgegrid.helpers - Body is "{"productId":"prd_SPM","propertyName":"prod.demo.a2s.ninja","cloneFrom":{"propertyId":542877,"version":1,"copyHostnames":false}}"
+[2019-05-10T16:24:37.473] [DEBUG] devops-prov.edgegrid.helpers - PREPARED BODY LENGTH 128
+[2019-05-10T16:24:37.473] [INFO] devops-prov.edgegrid.helpers - Signing content: "{"productId":"prd_SPM","propertyName":"prod.demo.a2s.ninja","cloneFrom":{"propertyId":542877,"version":1,"copyHostnames":false}}"
+[2019-05-10T16:24:37.474] [DEBUG] devops-prov.edgegrid.helpers - PREPARED BODY {"productId":"prd_SPM","propertyName":"prod.demo.a2s.ninja","cloneFrom":{"propertyId":542877,"version":1,"copyHostnames":false}}
+[2019-05-10T16:24:37.474] [INFO] devops-prov.edgegrid.helpers - Content hash is "OC864kkYWzwHJldZbW+fcUAxBa/eNq78Dq9hfHfPs2o="
+[2019-05-10T16:24:37.474] [INFO] devops-prov.edgegrid.helpers - Data to sign: "POST	https	akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net	/papi/v0/properties?groupId=125029&contractId=C-1ED34DY		OC864kkYWzwHJldZbW+fcUAxBa/eNq78Dq9hfHfPs2o=	EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:37+0000;nonce=4cd5f9c3-5de8-48e3-a4b6-5f5925c49405;" 
+
+[2019-05-10T16:24:37.474] [INFO] devops-prov.edgegrid.helpers - Signing key: qEdTgEXUs0b3izdh1+pzBx1I245p7WvZBARRKaWpKRU=
+
+[2019-05-10T16:24:37.474] [INFO] devops-prov.edgegrid.auth - Signed authorization header: EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:37+0000;nonce=4cd5f9c3-5de8-48e3-a4b6-5f5925c49405;signature=qJDcbDv/eoflvRweX8NrUxDnKLZmYWgOyc9fn9Oqozo=
+
+[2019-05-10T16:24:37.475] [INFO] devops-prov.edgegrid - request { debugId: 15,
+  uri:
+   'https://akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net/papi/v0/properties?groupId=125029&contractId=C-1ED34DY',
+  method: 'POST',
+  headers:
+   { 'X-User-Agent': 'Akamai-PD; Version=0.5.1',
+     'Content-Type': 'application/json',
+     Authorization:
+      'EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:37+0000;nonce=4cd5f9c3-5de8-48e3-a4b6-5f5925c49405;signature=qJDcbDv/eoflvRweX8NrUxDnKLZmYWgOyc9fn9Oqozo=',
+     host: 'akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net',
+     'content-length': 128 },
+  body:
+   '{"productId":"prd_SPM","propertyName":"prod.demo.a2s.ninja","cloneFrom":{"propertyId":542877,"version":1,"copyHostnames":false}}' }
+[2019-05-10T16:24:39.353] [INFO] devops-prov.edgegrid - response { debugId: 15,
+  headers:
+   { 'papi-cache-status': 'CACHE_MISS',
+     location:
+      'https://akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net/papi/v0/properties/prp_542881?groupId=grp_125029&contractId=ctr_C-1ED34DY',
+     'x-limit-properties-per-contract-limit': '1000',
+     'x-limit-properties-per-contract-remaining': '795',
+     vary: 'Accept-Encoding',
+     'content-type': 'application/json;charset=UTF-8',
+     'x-trace-id': '794b5cd589a542c2',
+     'content-length': '99',
+     date: 'Fri, 10 May 2019 14:24:39 GMT',
+     connection: 'close' },
+  statusCode: 201,
+  body:
+   '{\n  "propertyLink" : "/papi/v0/properties/prp_542881?groupId=grp_125029&contractId=ctr_C-1ED34DY"\n}' }
+[2019-05-10T16:24:39.354] [INFO] devops-prov.openclient - Status code:  201
+[2019-05-10T16:24:39.354] [INFO] devops-prov.openclient - Body:  {
+  "propertyLink" : "/papi/v0/properties/prp_542881?groupId=grp_125029&contractId=ctr_C-1ED34DY"
+}
+[2019-05-10T16:24:39.354] [INFO] devops-prov.envionment - propData:  { propertyLink:
+   '/papi/v0/properties/prp_542881?groupId=grp_125029&contractId=ctr_C-1ED34DY' }
+[2019-05-10T16:24:39.354] [INFO] devops-prov.envionment - results:  [ '/papi/v0/properties/prp_542881?groupId=grp_125029&contractId=ctr_C-1ED34DY',
+  'prp_',
+  '542881',
+  index: 0,
+  input: '/papi/v0/properties/prp_542881?groupId=grp_125029&contractId=ctr_C-1ED34DY',
+  groups: undefined ]
+[2019-05-10T16:24:39.354] [INFO] devops-prov.envionment - Checking latest version of 'prod.demo.a2s.ninja'
+[2019-05-10T16:24:39.354] [INFO] devops-prov.openclient - Requesting: GET /papi/v0/properties/542881/versions/latest
+[2019-05-10T16:24:39.354] [INFO] devops-prov.edgegrid.auth - Unsigned authorization header: EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:39+0000;nonce=2d841d91-a96d-4c79-b3c7-3e624da79ad6;
+
+[2019-05-10T16:24:39.354] [INFO] devops-prov.edgegrid.helpers - Body is ""
+[2019-05-10T16:24:39.354] [DEBUG] devops-prov.edgegrid.helpers - PREPARED BODY LENGTH 0
+[2019-05-10T16:24:39.354] [INFO] devops-prov.edgegrid.helpers - Data to sign: "GET	https	akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net	/papi/v0/properties/542881/versions/latest			EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:39+0000;nonce=2d841d91-a96d-4c79-b3c7-3e624da79ad6;" 
+
+[2019-05-10T16:24:39.355] [INFO] devops-prov.edgegrid.helpers - Signing key: CoG0nkb+REJSSm25GObFEcK9JAI1/0DFfmZgkUCM1RY=
+
+[2019-05-10T16:24:39.355] [INFO] devops-prov.edgegrid.auth - Signed authorization header: EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:39+0000;nonce=2d841d91-a96d-4c79-b3c7-3e624da79ad6;signature=Aa0u1hmls1d2rAKWMU6dwXceva/fI/sA+90W3wBoiyk=
+
+[2019-05-10T16:24:39.356] [INFO] devops-prov.edgegrid - request { debugId: 16,
+  uri:
+   'https://akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net/papi/v0/properties/542881/versions/latest',
+  method: 'GET',
+  headers:
+   { 'X-User-Agent': 'Akamai-PD; Version=0.5.1',
+     Authorization:
+      'EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:39+0000;nonce=2d841d91-a96d-4c79-b3c7-3e624da79ad6;signature=Aa0u1hmls1d2rAKWMU6dwXceva/fI/sA+90W3wBoiyk=',
+     host: 'akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net' } }
+[2019-05-10T16:24:39.620] [INFO] devops-prov.edgegrid - response { debugId: 16,
+  headers:
+   { 'papi-cache-status': 'CACHE_MISS',
+     location:
+      'https://akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net/papi/v0/properties/prp_542881/versions/1',
+     vary: 'Accept-Encoding',
+     'content-type': 'application/json;charset=UTF-8',
+     'x-trace-id': '794b5cd589a74338',
+     'content-length': '65',
+     date: 'Fri, 10 May 2019 14:24:39 GMT',
+     connection: 'close' },
+  statusCode: 302,
+  body:
+   '{\n  "versionLink" : "/papi/v0/properties/prp_542881/versions/1"\n}' }
+[2019-05-10T16:24:39.620] [INFO] devops-prov.edgegrid.auth - Unsigned authorization header: EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:39+0000;nonce=c3eb85f9-5b5d-46d3-820d-53522849cd77;
+
+[2019-05-10T16:24:39.620] [INFO] devops-prov.edgegrid.helpers - Body is ""
+[2019-05-10T16:24:39.620] [DEBUG] devops-prov.edgegrid.helpers - PREPARED BODY LENGTH 0
+[2019-05-10T16:24:39.620] [INFO] devops-prov.edgegrid.helpers - Data to sign: "GET	https	akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net	/papi/v0/properties/prp_542881/versions/1			EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:39+0000;nonce=c3eb85f9-5b5d-46d3-820d-53522849cd77;" 
+
+[2019-05-10T16:24:39.620] [INFO] devops-prov.edgegrid.helpers - Signing key: CoG0nkb+REJSSm25GObFEcK9JAI1/0DFfmZgkUCM1RY=
+
+[2019-05-10T16:24:39.620] [INFO] devops-prov.edgegrid.auth - Signed authorization header: EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:39+0000;nonce=c3eb85f9-5b5d-46d3-820d-53522849cd77;signature=Iyby0ReG9Xu8Z+zFmUvnkf6whHZLMXg2RUap0McEtxo=
+
+[2019-05-10T16:24:39.621] [INFO] devops-prov.edgegrid - request { debugId: 17,
+  uri:
+   'https://akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net/papi/v0/properties/prp_542881/versions/1',
+  method: 'GET',
+  headers:
+   { 'X-User-Agent': 'Akamai-PD; Version=0.5.1',
+     Authorization:
+      'EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:39+0000;nonce=c3eb85f9-5b5d-46d3-820d-53522849cd77;signature=Iyby0ReG9Xu8Z+zFmUvnkf6whHZLMXg2RUap0McEtxo=',
+     host: 'akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net' } }
+[2019-05-10T16:24:39.816] [INFO] devops-prov.edgegrid - response { debugId: 17,
+  headers:
+   { 'papi-cache-status': 'CACHE_MISS',
+     location:
+      'https://akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net/papi/v0/properties/542881/versions/1?groupId=125029&contractId=C-1ED34DY',
+     vary: 'Accept-Encoding',
+     'content-type': 'application/json;charset=UTF-8',
+     'x-trace-id': '794b5cd589a74349',
+     'content-length': '98',
+     date: 'Fri, 10 May 2019 14:24:39 GMT',
+     connection: 'close' },
+  statusCode: 302,
+  body:
+   '{\n  "redirectLink" : "/papi/v0/properties/542881/versions/1?groupId=125029&contractId=C-1ED34DY"\n}' }
+[2019-05-10T16:24:39.816] [INFO] devops-prov.edgegrid.auth - Unsigned authorization header: EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:39+0000;nonce=24eb5d2e-0c8f-441d-b1a4-2224128c2cce;
+
+[2019-05-10T16:24:39.816] [INFO] devops-prov.edgegrid.helpers - Body is ""
+[2019-05-10T16:24:39.816] [DEBUG] devops-prov.edgegrid.helpers - PREPARED BODY LENGTH 0
+[2019-05-10T16:24:39.816] [INFO] devops-prov.edgegrid.helpers - Data to sign: "GET	https	akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net	/papi/v0/properties/542881/versions/1?groupId=125029&contractId=C-1ED34DY			EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:39+0000;nonce=24eb5d2e-0c8f-441d-b1a4-2224128c2cce;" 
+
+[2019-05-10T16:24:39.816] [INFO] devops-prov.edgegrid.helpers - Signing key: CoG0nkb+REJSSm25GObFEcK9JAI1/0DFfmZgkUCM1RY=
+
+[2019-05-10T16:24:39.816] [INFO] devops-prov.edgegrid.auth - Signed authorization header: EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:39+0000;nonce=24eb5d2e-0c8f-441d-b1a4-2224128c2cce;signature=Vsy12kNPliNycy6URrAOWd2qebR0JD2vQEMwGLSpAvs=
+
+[2019-05-10T16:24:39.818] [INFO] devops-prov.edgegrid - request { debugId: 18,
+  uri:
+   'https://akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net/papi/v0/properties/542881/versions/1?groupId=125029&contractId=C-1ED34DY',
+  method: 'GET',
+  headers:
+   { 'X-User-Agent': 'Akamai-PD; Version=0.5.1',
+     Authorization:
+      'EG1-HMAC-SHA256 client_token=akab-gnasupcdly2zn57n-hwzqrs425m6pkfx3;access_token=akab-nimc2hhv7lrhs6w2-gxrxtbqusmuzurov;timestamp=20190510T14:24:39+0000;nonce=24eb5d2e-0c8f-441d-b1a4-2224128c2cce;signature=Vsy12kNPliNycy6URrAOWd2qebR0JD2vQEMwGLSpAvs=',
+     host: 'akab-i3bdcdazclq45kls-n5z5tpm3hxsud5yd.luna.akamaiapis.net' } }
+[2019-05-10T16:24:40.116] [INFO] devops-prov.edgegrid - response { debugId: 18,
+  headers:
+   { 'papi-cache-status': 'CACHE_MISS',
+     vary: 'Accept, Accept-Encoding',
+     'cache-control': 'no-store',
+     'content-type': 'application/json;charset=UTF-8',
+     'x-trace-id': '794b5cd589a74356',
+     'content-length': '564',
+     'x-n': 'S',
+     date: 'Fri, 10 May 2019 14:24:40 GMT',
+     connection: 'close' },
+  statusCode: 200,
+  body:
+   '{\n  "propertyId" : "prp_542881",\n  "propertyName" : "prod.demo.a2s.ninja",\n  "accountId" : "act_B-C-1ED34DK",\n  "contractId" : "ctr_C-1ED34DY",\n  "groupId" : "grp_125029",\n  "assetId" : "aid_10676149",\n  "versions" : {\n    "items" : [ {\n      "propertyVersion" : 1,\n      "updatedByUser" : "y6kqbjuuxapfrz3b",\n      "updatedDate" : "2019-05-10T14:24:39Z",\n      "productionStatus" : "INACTIVE",\n      "stagingStatus" : "INACTIVE",\n      "etag" : "19a4a2803f7589bba4cc704bdfd22ca27ec5d6dc",\n      "productId" : "prd_SPM",\n      "ruleFormat" : "latest"\n    } ]\n  }\n}' }
+[2019-05-10T16:24:40.117] [INFO] devops-prov.openclient - Status code:  200
+[2019-05-10T16:24:40.117] [INFO] devops-prov.openclient - Body:  {
+  "propertyId" : "prp_542881",
+  "propertyName" : "prod.demo.a2s.ninja",
+  "accountId" : "act_B-C-1ED34DK",
+  "contractId" : "ctr_C-1ED34DY",
+  "groupId" : "grp_125029",
+  "assetId" : "aid_10676149",
+  "versions" : {
+    "items" : [ {
+      "propertyVersion" : 1,
+      "updatedByUser" : "y6kqbjuuxapfrz3b",
+      "updatedDate" : "2019-05-10T14:24:39Z",
+      "productionStatus" : "INACTIVE",
+      "stagingStatus" : "INACTIVE",
+      "etag" : "19a4a2803f7589bba4cc704bdfd22ca27ec5d6dc",
+      "productId" : "prd_SPM",
+      "ruleFormat" : "latest"
+    } ]
+  }
+}
+[2019-05-10T16:24:40.117] [INFO] devops-prov.envionment - envInfo:  { name: 'prod',
+  propertyName: 'prod.demo.a2s.ninja',
+  groupId: 125029,
+  isSecure: false,
+  propertyId: 542881,
+  latestVersionInfo:
+   { propertyVersion: 1,
+     updatedByUser: 'y6kqbjuuxapfrz3b',
+     updatedDate: '2019-05-10T14:24:39Z',
+     productionStatus: 'INACTIVE',
+     stagingStatus: 'INACTIVE',
+     etag: '19a4a2803f7589bba4cc704bdfd22ca27ec5d6dc',
+     productId: 'prd_SPM',
+     ruleFormat: 'latest' } }
+[2019-05-10T16:24:40.117] [INFO] devops-prov.utils - writing '/Users/ahogg/git/radiofrance-workshop/devops/demo/akamai-pipeline/demo.a2s.ninja/environments/prod/envInfo.json'
+[2019-05-10T16:24:40.118] [INFO] devops-prov.utils - writing '/Users/ahogg/git/radiofrance-workshop/devops/demo/akamai-pipeline/demo.a2s.ninja/environments/prod/hostnames.json'
+[2019-05-10T16:24:40.118] [INFO] devops-prov.utils - loading '/Users/ahogg/git/radiofrance-workshop/devops/demo/akamai-pipeline/demo.a2s.ninja/environments/dev/envInfo.json'
+[2019-05-10T16:24:40.118] [INFO] devops-prov.utils - writing '/Users/ahogg/git/radiofrance-workshop/devops/demo/akamai-pipeline/demo.a2s.ninja/environments/dev/envInfo.json'
+[2019-05-10T16:24:40.119] [INFO] devops-prov.utils - loading '/Users/ahogg/.akamai-cli/src/cli-promotional-deployment/resources/template.converter.data.json'
+[2019-05-10T16:24:40.120] [INFO] devops-prov.el - parsing: boolean
+[2019-05-10T16:24:40.121] [INFO] devops-prov.el - parsing: enableCustomKey
+[2019-05-10T16:24:40.121] [INFO] devops-prov.el - parsing: \${env.sureRouteTestObject}
+[2019-05-10T16:24:40.122] [INFO] devops-prov.el - Replacing '\${env.sureRouteTestObject}' with: '${env.sureRouteTestObject}'
+[2019-05-10T16:24:40.122] [INFO] devops-prov.el - parsing: url
+[2019-05-10T16:24:40.122] [INFO] devops-prov.el - parsing: sureRouteTestObject
+[2019-05-10T16:24:40.122] [INFO] devops-prov.el - parsing: /akamai/sure-route-test-object.html
+[2019-05-10T16:24:40.122] [INFO] devops-prov.el - parsing: \${env.originHostname}
+[2019-05-10T16:24:40.122] [INFO] devops-prov.el - Replacing '\${env.originHostname}' with: '${env.originHostname}'
+[2019-05-10T16:24:40.122] [INFO] devops-prov.el - parsing: hostname
+[2019-05-10T16:24:40.122] [INFO] devops-prov.el - parsing: originHostname
+[2019-05-10T16:24:40.122] [INFO] devops-prov.el - parsing: origin-${environment.propertyName}
+[2019-05-10T16:24:40.123] [INFO] devops-prov.el - Replacing 'origin-${environment.propertyName}' with: 'origin-dev.demo.a2s.ninja'
+[2019-05-10T16:24:40.123] [INFO] devops-prov.el - parsing: \${env.netStorageInfo}
+[2019-05-10T16:24:40.123] [INFO] devops-prov.el - Replacing '\${env.netStorageInfo}' with: '${env.netStorageInfo}'
+[2019-05-10T16:24:40.123] [INFO] devops-prov.el - parsing: netStorage
+[2019-05-10T16:24:40.123] [INFO] devops-prov.el - parsing: netStorageInfo
+[2019-05-10T16:24:40.123] [INFO] devops-prov.el - parsing: ${environment.propertyName}.download.akamai.com
+[2019-05-10T16:24:40.123] [INFO] devops-prov.el - Replacing '${environment.propertyName}.download.akamai.com' with: 'dev.demo.a2s.ninja.download.akamai.com'
+[2019-05-10T16:24:40.123] [INFO] devops-prov.el - parsing: \${env.cpCode}
+[2019-05-10T16:24:40.123] [INFO] devops-prov.el - Replacing '\${env.cpCode}' with: '${env.cpCode}'
+[2019-05-10T16:24:40.123] [INFO] devops-prov.el - parsing: cpCode
+[2019-05-10T16:24:40.124] [INFO] devops-prov.el - parsing: cpCode
+[2019-05-10T16:24:40.124] [INFO] devops-prov.el - parsing: compression.json
+[2019-05-10T16:24:40.124] [INFO] devops-prov.el - parsing: static.json
+[2019-05-10T16:24:40.124] [INFO] devops-prov.el - parsing: dynamic.json
+[2019-05-10T16:24:40.124] [INFO] devops-prov.el - parsing: performance.json
+[2019-05-10T16:24:40.124] [INFO] devops-prov.el - parsing: lfo.json
+[2019-05-10T16:24:40.124] [INFO] devops-prov.el - parsing: \${env.tier1MobileCompressionMethod}
+[2019-05-10T16:24:40.124] [INFO] devops-prov.el - Replacing '\${env.tier1MobileCompressionMethod}' with: '${env.tier1MobileCompressionMethod}'
+[2019-05-10T16:24:40.124] [INFO] devops-prov.el - parsing: url
+[2019-05-10T16:24:40.124] [INFO] devops-prov.el - parsing: tier1MobileCompressionMethod
+[2019-05-10T16:24:40.124] [INFO] devops-prov.el - parsing: BYPASS
+[2019-05-10T16:24:40.124] [INFO] devops-prov.el - parsing: \${env.tier2MobileCompressionMethod}
+[2019-05-10T16:24:40.124] [INFO] devops-prov.el - Replacing '\${env.tier2MobileCompressionMethod}' with: '${env.tier2MobileCompressionMethod}'
+[2019-05-10T16:24:40.124] [INFO] devops-prov.el - parsing: url
+[2019-05-10T16:24:40.124] [INFO] devops-prov.el - parsing: tier2MobileCompressionMethod
+[2019-05-10T16:24:40.124] [INFO] devops-prov.el - parsing: BYPASS
+[2019-05-10T16:24:40.124] [INFO] devops-prov.el - parsing: \${env.firewallConfiguration}
+[2019-05-10T16:24:40.124] [INFO] devops-prov.el - Replacing '\${env.firewallConfiguration}' with: '${env.firewallConfiguration}'
+[2019-05-10T16:24:40.124] [INFO] devops-prov.el - parsing: wafRule
+[2019-05-10T16:24:40.125] [INFO] devops-prov.el - parsing: firewallConfiguration
+[2019-05-10T16:24:40.126] [INFO] devops-prov.utils - writing '/Users/ahogg/git/radiofrance-workshop/devops/demo/akamai-pipeline/demo.a2s.ninja/templates/main.json'
+[2019-05-10T16:24:40.126] [INFO] devops-prov.utils - writing '/Users/ahogg/git/radiofrance-workshop/devops/demo/akamai-pipeline/demo.a2s.ninja/environments/variableDefinitions.json'
+[2019-05-10T16:24:40.126] [INFO] devops-prov.utils - writing '/Users/ahogg/git/radiofrance-workshop/devops/demo/akamai-pipeline/demo.a2s.ninja/environments/dev/variables.json'
+[2019-05-10T16:24:40.127] [INFO] devops-prov.utils - loading '/Users/ahogg/git/radiofrance-workshop/devops/demo/akamai-pipeline/demo.a2s.ninja/environments/qa/envInfo.json'
+[2019-05-10T16:24:40.127] [INFO] devops-prov.utils - writing '/Users/ahogg/git/radiofrance-workshop/devops/demo/akamai-pipeline/demo.a2s.ninja/environments/qa/envInfo.json'
+[2019-05-10T16:24:40.127] [INFO] devops-prov.utils - loading '/Users/ahogg/.akamai-cli/src/cli-promotional-deployment/resources/template.converter.data.json'
+[2019-05-10T16:24:40.127] [INFO] devops-prov.el - parsing: boolean
+[2019-05-10T16:24:40.128] [INFO] devops-prov.el - parsing: enableCustomKey
+[2019-05-10T16:24:40.128] [INFO] devops-prov.el - parsing: \${env.sureRouteTestObject}
+[2019-05-10T16:24:40.128] [INFO] devops-prov.el - Replacing '\${env.sureRouteTestObject}' with: '${env.sureRouteTestObject}'
+[2019-05-10T16:24:40.128] [INFO] devops-prov.el - parsing: url
+[2019-05-10T16:24:40.128] [INFO] devops-prov.el - parsing: sureRouteTestObject
+[2019-05-10T16:24:40.128] [INFO] devops-prov.el - parsing: /akamai/sure-route-test-object.html
+[2019-05-10T16:24:40.128] [INFO] devops-prov.el - parsing: \${env.originHostname}
+[2019-05-10T16:24:40.129] [INFO] devops-prov.el - Replacing '\${env.originHostname}' with: '${env.originHostname}'
+[2019-05-10T16:24:40.129] [INFO] devops-prov.el - parsing: hostname
+[2019-05-10T16:24:40.129] [INFO] devops-prov.el - parsing: originHostname
+[2019-05-10T16:24:40.129] [INFO] devops-prov.el - parsing: origin-${environment.propertyName}
+[2019-05-10T16:24:40.129] [INFO] devops-prov.el - Replacing 'origin-${environment.propertyName}' with: 'origin-qa.demo.a2s.ninja'
+[2019-05-10T16:24:40.129] [INFO] devops-prov.el - parsing: \${env.netStorageInfo}
+[2019-05-10T16:24:40.129] [INFO] devops-prov.el - Replacing '\${env.netStorageInfo}' with: '${env.netStorageInfo}'
+[2019-05-10T16:24:40.129] [INFO] devops-prov.el - parsing: netStorage
+[2019-05-10T16:24:40.130] [INFO] devops-prov.el - parsing: netStorageInfo
+[2019-05-10T16:24:40.130] [INFO] devops-prov.el - parsing: ${environment.propertyName}.download.akamai.com
+[2019-05-10T16:24:40.130] [INFO] devops-prov.el - Replacing '${environment.propertyName}.download.akamai.com' with: 'qa.demo.a2s.ninja.download.akamai.com'
+[2019-05-10T16:24:40.130] [INFO] devops-prov.el - parsing: \${env.cpCode}
+[2019-05-10T16:24:40.130] [INFO] devops-prov.el - Replacing '\${env.cpCode}' with: '${env.cpCode}'
+[2019-05-10T16:24:40.130] [INFO] devops-prov.el - parsing: cpCode
+[2019-05-10T16:24:40.130] [INFO] devops-prov.el - parsing: cpCode
+[2019-05-10T16:24:40.130] [INFO] devops-prov.el - parsing: compression.json
+[2019-05-10T16:24:40.130] [INFO] devops-prov.el - parsing: static.json
+[2019-05-10T16:24:40.131] [INFO] devops-prov.el - parsing: dynamic.json
+[2019-05-10T16:24:40.131] [INFO] devops-prov.el - parsing: performance.json
+[2019-05-10T16:24:40.131] [INFO] devops-prov.el - parsing: lfo.json
+[2019-05-10T16:24:40.131] [INFO] devops-prov.el - parsing: \${env.tier1MobileCompressionMethod}
+[2019-05-10T16:24:40.131] [INFO] devops-prov.el - Replacing '\${env.tier1MobileCompressionMethod}' with: '${env.tier1MobileCompressionMethod}'
+[2019-05-10T16:24:40.131] [INFO] devops-prov.el - parsing: url
+[2019-05-10T16:24:40.131] [INFO] devops-prov.el - parsing: tier1MobileCompressionMethod
+[2019-05-10T16:24:40.131] [INFO] devops-prov.el - parsing: BYPASS
+[2019-05-10T16:24:40.131] [INFO] devops-prov.el - parsing: \${env.tier2MobileCompressionMethod}
+[2019-05-10T16:24:40.131] [INFO] devops-prov.el - Replacing '\${env.tier2MobileCompressionMethod}' with: '${env.tier2MobileCompressionMethod}'
+[2019-05-10T16:24:40.131] [INFO] devops-prov.el - parsing: url
+[2019-05-10T16:24:40.131] [INFO] devops-prov.el - parsing: tier2MobileCompressionMethod
+[2019-05-10T16:24:40.132] [INFO] devops-prov.el - parsing: BYPASS
+[2019-05-10T16:24:40.132] [INFO] devops-prov.el - parsing: \${env.firewallConfiguration}
+[2019-05-10T16:24:40.132] [INFO] devops-prov.el - Replacing '\${env.firewallConfiguration}' with: '${env.firewallConfiguration}'
+[2019-05-10T16:24:40.132] [INFO] devops-prov.el - parsing: wafRule
+[2019-05-10T16:24:40.132] [INFO] devops-prov.el - parsing: firewallConfiguration
+[2019-05-10T16:24:40.132] [INFO] devops-prov.utils - writing '/Users/ahogg/git/radiofrance-workshop/devops/demo/akamai-pipeline/demo.a2s.ninja/environments/qa/variables.json'
+[2019-05-10T16:24:40.132] [INFO] devops-prov.utils - loading '/Users/ahogg/git/radiofrance-workshop/devops/demo/akamai-pipeline/demo.a2s.ninja/environments/prod/envInfo.json'
+[2019-05-10T16:24:40.133] [INFO] devops-prov.utils - writing '/Users/ahogg/git/radiofrance-workshop/devops/demo/akamai-pipeline/demo.a2s.ninja/environments/prod/envInfo.json'
+[2019-05-10T16:24:40.133] [INFO] devops-prov.utils - loading '/Users/ahogg/.akamai-cli/src/cli-promotional-deployment/resources/template.converter.data.json'
+[2019-05-10T16:24:40.133] [INFO] devops-prov.el - parsing: boolean
+[2019-05-10T16:24:40.133] [INFO] devops-prov.el - parsing: enableCustomKey
+[2019-05-10T16:24:40.133] [INFO] devops-prov.el - parsing: \${env.sureRouteTestObject}
+[2019-05-10T16:24:40.133] [INFO] devops-prov.el - Replacing '\${env.sureRouteTestObject}' with: '${env.sureRouteTestObject}'
+[2019-05-10T16:24:40.133] [INFO] devops-prov.el - parsing: url
+[2019-05-10T16:24:40.133] [INFO] devops-prov.el - parsing: sureRouteTestObject
+[2019-05-10T16:24:40.134] [INFO] devops-prov.el - parsing: /akamai/sure-route-test-object.html
+[2019-05-10T16:24:40.134] [INFO] devops-prov.el - parsing: \${env.originHostname}
+[2019-05-10T16:24:40.134] [INFO] devops-prov.el - Replacing '\${env.originHostname}' with: '${env.originHostname}'
+[2019-05-10T16:24:40.134] [INFO] devops-prov.el - parsing: hostname
+[2019-05-10T16:24:40.134] [INFO] devops-prov.el - parsing: originHostname
+[2019-05-10T16:24:40.134] [INFO] devops-prov.el - parsing: origin-${environment.propertyName}
+[2019-05-10T16:24:40.134] [INFO] devops-prov.el - Replacing 'origin-${environment.propertyName}' with: 'origin-prod.demo.a2s.ninja'
+[2019-05-10T16:24:40.134] [INFO] devops-prov.el - parsing: \${env.netStorageInfo}
+[2019-05-10T16:24:40.134] [INFO] devops-prov.el - Replacing '\${env.netStorageInfo}' with: '${env.netStorageInfo}'
+[2019-05-10T16:24:40.134] [INFO] devops-prov.el - parsing: netStorage
+[2019-05-10T16:24:40.134] [INFO] devops-prov.el - parsing: netStorageInfo
+[2019-05-10T16:24:40.134] [INFO] devops-prov.el - parsing: ${environment.propertyName}.download.akamai.com
+[2019-05-10T16:24:40.134] [INFO] devops-prov.el - Replacing '${environment.propertyName}.download.akamai.com' with: 'prod.demo.a2s.ninja.download.akamai.com'
+[2019-05-10T16:24:40.134] [INFO] devops-prov.el - parsing: \${env.cpCode}
+[2019-05-10T16:24:40.134] [INFO] devops-prov.el - Replacing '\${env.cpCode}' with: '${env.cpCode}'
+[2019-05-10T16:24:40.134] [INFO] devops-prov.el - parsing: cpCode
+[2019-05-10T16:24:40.134] [INFO] devops-prov.el - parsing: cpCode
+[2019-05-10T16:24:40.135] [INFO] devops-prov.el - parsing: compression.json
+[2019-05-10T16:24:40.135] [INFO] devops-prov.el - parsing: static.json
+[2019-05-10T16:24:40.135] [INFO] devops-prov.el - parsing: dynamic.json
+[2019-05-10T16:24:40.135] [INFO] devops-prov.el - parsing: performance.json
+[2019-05-10T16:24:40.135] [INFO] devops-prov.el - parsing: lfo.json
+[2019-05-10T16:24:40.135] [INFO] devops-prov.el - parsing: \${env.tier1MobileCompressionMethod}
+[2019-05-10T16:24:40.135] [INFO] devops-prov.el - Replacing '\${env.tier1MobileCompressionMethod}' with: '${env.tier1MobileCompressionMethod}'
+[2019-05-10T16:24:40.135] [INFO] devops-prov.el - parsing: url
+[2019-05-10T16:24:40.135] [INFO] devops-prov.el - parsing: tier1MobileCompressionMethod
+[2019-05-10T16:24:40.135] [INFO] devops-prov.el - parsing: BYPASS
+[2019-05-10T16:24:40.135] [INFO] devops-prov.el - parsing: \${env.tier2MobileCompressionMethod}
+[2019-05-10T16:24:40.135] [INFO] devops-prov.el - Replacing '\${env.tier2MobileCompressionMethod}' with: '${env.tier2MobileCompressionMethod}'
+[2019-05-10T16:24:40.135] [INFO] devops-prov.el - parsing: url
+[2019-05-10T16:24:40.135] [INFO] devops-prov.el - parsing: tier2MobileCompressionMethod
+[2019-05-10T16:24:40.135] [INFO] devops-prov.el - parsing: BYPASS
+[2019-05-10T16:24:40.136] [INFO] devops-prov.el - parsing: \${env.firewallConfiguration}
+[2019-05-10T16:24:40.136] [INFO] devops-prov.el - Replacing '\${env.firewallConfiguration}' with: '${env.firewallConfiguration}'
+[2019-05-10T16:24:40.136] [INFO] devops-prov.el - parsing: wafRule
+[2019-05-10T16:24:40.136] [INFO] devops-prov.el - parsing: firewallConfiguration
+[2019-05-10T16:24:40.136] [INFO] devops-prov.utils - writing '/Users/ahogg/git/radiofrance-workshop/devops/demo/akamai-pipeline/demo.a2s.ninja/environments/prod/variables.json'
