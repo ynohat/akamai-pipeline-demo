@@ -5,14 +5,64 @@
     "isSecure": false,
     "propertyId": 542880,
     "latestVersionInfo": {
-        "propertyVersion": 1,
-        "updatedByUser": "y6kqbjuuxapfrz3b",
-        "updatedDate": "2019-05-10T14:24:36Z",
+        "propertyVersion": 6,
+        "updatedByUser": "ji4qbugnnbzlk74x",
+        "updatedDate": "2019-05-15T13:28:14Z",
         "productionStatus": "INACTIVE",
         "stagingStatus": "INACTIVE",
-        "etag": "9ee2ac3556f981933438a05b1935c400c97ff464",
+        "etag": "bf053e0370493a5efb647978caf3bb572fc53587",
         "productId": "prd_SPM",
-        "ruleFormat": "latest"
+        "ruleFormat": "v2017-06-19"
     },
-    "suggestedRuleFormat": "v2017-06-19"
+    "suggestedRuleFormat": "v2017-06-19",
+    "environmentHash": "dfba01b8e37663223fdeeac8153d476ffe273eebc1c0623ce2b1bd2bc8c1384c",
+    "ruleTreeHash": "f9a5a3a0b2406265b5bdb8c961164433814a519cec57df055bf3e6ff86a33825",
+    "lastSavedHash": "dfba01b8e37663223fdeeac8153d476ffe273eebc1c0623ce2b1bd2bc8c1384c",
+    "lastValidatedHash": "dfba01b8e37663223fdeeac8153d476ffe273eebc1c0623ce2b1bd2bc8c1384c",
+    "lastSaveWarnings": [
+        {
+            "type": "https://problems.luna.akamaiapis.net/papi/v0/validation/cannot_validate",
+            "errorLocation": {
+                "template": "templates/main.json",
+                "variables": [],
+                "location": "rules/behaviors/2/options/value",
+                "value": "/demo.a2s.ninja/{{builtin.AK_HOST}}"
+            },
+            "detail": "The input to option Base Path of `Origin Base Path` cannot be validated because of variable expression usage. Because of the use of variables, the value of the option is only known at runtime."
+        }
+    ],
+    "lastSaveErrors": [
+        {
+            "type": "https://problems.luna.akamaiapis.net/papi/v0/validation/attribute_required",
+            "errorLocation": {
+                "template": "templates/main.json",
+                "variables": [],
+                "location": "rules/behaviors/1/options/tieredDistributionMap"
+            },
+            "detail": "The Tiered Distribution Map option on the `Tiered Distribution` behavior is required."
+        }
+    ],
+    "lastSaveHostnameErrors": [],
+    "lastSaveHostnameWarnings": [],
+    "lastSavedHostnamesHash": "6a467e810a86794aa75511eb5407a1bacfe54e18acebc29b7c2250edb595e604",
+    "activeIn_STAGING_Info": {
+        "propertyVersion": 5,
+        "updatedByUser": "ji4qbugnnbzlk74x",
+        "updatedDate": "2019-05-13T08:01:57Z",
+        "productionStatus": "ACTIVE",
+        "stagingStatus": "ACTIVE",
+        "etag": "deaae0214b5634e14e39e9b349be03bfd6996c4b",
+        "productId": "prd_SPM",
+        "ruleFormat": "v2017-06-19"
+    },
+    "activeIn_PRODUCTION_Info": {
+        "propertyVersion": 5,
+        "updatedByUser": "ji4qbugnnbzlk74x",
+        "updatedDate": "2019-05-13T08:01:57Z",
+        "productionStatus": "ACTIVE",
+        "stagingStatus": "ACTIVE",
+        "etag": "deaae0214b5634e14e39e9b349be03bfd6996c4b",
+        "productId": "prd_SPM",
+        "ruleFormat": "v2017-06-19"
+    }
 }

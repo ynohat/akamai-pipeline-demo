@@ -12,7 +12,6 @@
     "version": "0.5.1",
     "isSecure": false,
     "edgeGridConfig": {
-        "section": "a2s-open"
     },
     "name": "demo.a2s.ninja"
 }

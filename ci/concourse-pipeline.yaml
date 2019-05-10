@@ -1,0 +1,311 @@
+---
+jobs:
+
+  - name: Verify Credentials
+    serial: true
+    public: true
+    plan:
+      - get: akamai-pipeline
+        trigger: true
+
+      - task: akamai-auth-verify
+        file: akamai-pipeline/ci/tasks/akamai-auth-verify.yaml
+        params:
+          AKAMAI_PIPELINE_EDGERC: ((edgerc))
+          AKAMAI_PIPELINE_EDGERC_SECTION: default
+
+  - name: Stage Dev
+    serial: true
+    public: true
+    plan:
+      - get: akamai-pipeline
+        passed: [Verify Credentials]
+        trigger: true
+
+      - task: akamai-pipeline-save
+        file: akamai-pipeline/ci/tasks/akamai-pipeline-save.yaml
+        params:
+          GIT_NAME: Concourse
+          GIT_EMAIL: ahogg@akamai.com
+          AKAMAI_PIPELINE_EDGERC: ((edgerc))
+          AKAMAI_PIPELINE_EDGERC_SECTION: default
+          AKAMAI_PIPELINE_NAME: demo.a2s.ninja
+          AKAMAI_PIPELINE_ENV: dev
+
+      - task: akamai-pipeline-promote
+        file: akamai-pipeline/ci/tasks/akamai-pipeline-promote.yaml
+        input_mapping:
+          # pass the output of save to the akamai-pipeline input
+          # (this will contain the updated info from the save step)
+          akamai-pipeline: akamai-pipeline-wip
+        params:
+          GIT_NAME: Concourse
+          GIT_EMAIL: ahogg@akamai.com
+          AKAMAI_PIPELINE_EDGERC: ((edgerc))
+          AKAMAI_PIPELINE_EDGERC_SECTION: default
+          AKAMAI_PIPELINE_NAME: demo.a2s.ninja
+          AKAMAI_PIPELINE_ENV: dev
+          AKAMAI_PIPELINE_NETWORK: staging
+          AKAMAI_PIPELINE_EMAILS: ahogg@akamai.com
+
+      - put: akamai-pipeline
+        params: {repository: akamai-pipeline-wip}
+
+      - task: run-tests
+        file: akamai-pipeline/ci/tasks/run-tests.yaml
+        params:
+          AKAMAI_PIPELINE_EDGERC: ((edgerc))
+          AKAMAI_PIPELINE_EDGERC_SECTION: default
+          AKAMAI_PIPELINE_NAME: demo.a2s.ninja
+          AKAMAI_PIPELINE_ENV: dev
+          AKAMAI_PIPELINE_NETWORK: staging
+
+  - name: Promote Dev
+    public: true
+    serial: true
+    plan:
+      - get: slack-approve-dev
+        version: every
+        trigger: true
+
+      - get: akamai-pipeline
+        passed: [Verify Credentials]
+
+      - task: akamai-pipeline-promote
+        file: akamai-pipeline/ci/tasks/akamai-pipeline-promote.yaml
+        params:
+          GIT_NAME: Concourse
+          GIT_EMAIL: ahogg@akamai.com
+          AKAMAI_PIPELINE_EDGERC: ((edgerc))
+          AKAMAI_PIPELINE_EDGERC_SECTION: default
+          AKAMAI_PIPELINE_NAME: demo.a2s.ninja
+          AKAMAI_PIPELINE_ENV: dev
+          AKAMAI_PIPELINE_NETWORK: production
+          AKAMAI_PIPELINE_EMAILS: ahogg@akamai.com
+
+      - put: akamai-pipeline
+        params: {repository: akamai-pipeline-wip, rebase: true}
+        on_success:
+          put: slack-approve-dev
+          params:
+            path: slack-approve-dev
+            reply: success!
+            reply_thread: false
+        on_failure:
+          put: slack-approve-dev
+          params:
+            path: slack-approve-dev
+            reply: failed!
+            reply_thread: false
+
+  - name: Stage QA
+    public: true
+    serial: true
+    plan:
+      - get: akamai-pipeline
+        trigger: true
+        passed: [Stage Dev]
+
+      - task: akamai-pipeline-save
+        file: akamai-pipeline/ci/tasks/akamai-pipeline-save.yaml
+        params:
+          GIT_NAME: Concourse
+          GIT_EMAIL: ahogg@akamai.com
+          AKAMAI_PIPELINE_EDGERC: ((edgerc))
+          AKAMAI_PIPELINE_EDGERC_SECTION: default
+          AKAMAI_PIPELINE_NAME: demo.a2s.ninja
+          AKAMAI_PIPELINE_ENV: qa
+
+      - task: akamai-pipeline-promote
+        file: akamai-pipeline/ci/tasks/akamai-pipeline-promote.yaml
+        input_mapping:
+          # pass the output of save to the akamai-pipeline input
+          # (this will contain the updated info from the save step)
+          akamai-pipeline: akamai-pipeline-wip
+        params:
+          GIT_NAME: Concourse
+          GIT_EMAIL: ahogg@akamai.com
+          AKAMAI_PIPELINE_EDGERC: ((edgerc))
+          AKAMAI_PIPELINE_EDGERC_SECTION: default
+          AKAMAI_PIPELINE_NAME: demo.a2s.ninja
+          AKAMAI_PIPELINE_ENV: qa
+          AKAMAI_PIPELINE_NETWORK: staging
+          AKAMAI_PIPELINE_EMAILS: ahogg@akamai.com
+
+      - put: akamai-pipeline
+        params: {repository: akamai-pipeline-wip, rebase: true}
+
+      - task: run-tests
+        file: akamai-pipeline/ci/tasks/run-tests.yaml
+        params:
+          AKAMAI_PIPELINE_EDGERC: ((edgerc))
+          AKAMAI_PIPELINE_EDGERC_SECTION: default
+          AKAMAI_PIPELINE_NAME: demo.a2s.ninja
+          AKAMAI_PIPELINE_ENV: qa
+          AKAMAI_PIPELINE_NETWORK: staging
+
+  - name: Promote QA
+    public: true
+    serial: true
+    plan:
+      - get: slack-approve-qa
+        version: every
+        trigger: true
+
+      - get: akamai-pipeline
+        passed: [Promote Dev]
+
+      - task: akamai-pipeline-promote
+        file: akamai-pipeline/ci/tasks/akamai-pipeline-promote.yaml
+        params:
+          GIT_NAME: Concourse
+          GIT_EMAIL: ahogg@akamai.com
+          AKAMAI_PIPELINE_EDGERC: ((edgerc))
+          AKAMAI_PIPELINE_EDGERC_SECTION: default
+          AKAMAI_PIPELINE_NAME: demo.a2s.ninja
+          AKAMAI_PIPELINE_ENV: qa
+          AKAMAI_PIPELINE_NETWORK: production
+          AKAMAI_PIPELINE_EMAILS: ahogg@akamai.com
+
+      - put: akamai-pipeline
+        params: {repository: akamai-pipeline-wip, rebase: true}
+        on_success:
+          put: slack-approve-qa
+          params:
+            path: slack-approve-qa
+            reply: success!
+            reply_thread: false
+        on_failure:
+          put: slack-approve-qa
+          params:
+            path: slack-approve-qa
+            reply: failed!
+            reply_thread: false
+
+  - name: Stage Prod
+    public: true
+    serial: true
+    plan:
+      - get: akamai-pipeline
+        trigger: true
+        passed: [Stage QA]
+
+      - task: akamai-pipeline-save
+        file: akamai-pipeline/ci/tasks/akamai-pipeline-save.yaml
+        params:
+          GIT_NAME: Concourse
+          GIT_EMAIL: ahogg@akamai.com
+          AKAMAI_PIPELINE_EDGERC: ((edgerc))
+          AKAMAI_PIPELINE_EDGERC_SECTION: default
+          AKAMAI_PIPELINE_NAME: demo.a2s.ninja
+          AKAMAI_PIPELINE_ENV: prod
+
+      - task: akamai-pipeline-promote
+        file: akamai-pipeline/ci/tasks/akamai-pipeline-promote.yaml
+        input_mapping:
+          # pass the output of save to the akamai-pipeline input
+          # (this will contain the updated info from the save step)
+          akamai-pipeline: akamai-pipeline-wip
+        params:
+          GIT_NAME: Concourse
+          GIT_EMAIL: ahogg@akamai.com
+          AKAMAI_PIPELINE_EDGERC: ((edgerc))
+          AKAMAI_PIPELINE_EDGERC_SECTION: default
+          AKAMAI_PIPELINE_NAME: demo.a2s.ninja
+          AKAMAI_PIPELINE_ENV: prod
+          AKAMAI_PIPELINE_NETWORK: staging
+          AKAMAI_PIPELINE_EMAILS: ahogg@akamai.com
+
+      - put: akamai-pipeline
+        params: {repository: akamai-pipeline-wip, rebase: true}
+
+      - task: run-tests
+        file: akamai-pipeline/ci/tasks/run-tests.yaml
+        params:
+          AKAMAI_PIPELINE_EDGERC: ((edgerc))
+          AKAMAI_PIPELINE_EDGERC_SECTION: default
+          AKAMAI_PIPELINE_NAME: demo.a2s.ninja
+          AKAMAI_PIPELINE_ENV: prod
+          AKAMAI_PIPELINE_NETWORK: staging
+
+  - name: Promote Prod
+    public: true
+    serial: true
+    plan:
+      - get: akamai-pipeline
+        passed: [Promote QA]
+
+      - get: slack-approve-prod
+        version: every
+        trigger: true
+
+      - task: akamai-pipeline-promote
+        file: akamai-pipeline/ci/tasks/akamai-pipeline-promote.yaml
+        params:
+          GIT_NAME: Concourse
+          GIT_EMAIL: ahogg@akamai.com
+          AKAMAI_PIPELINE_EDGERC: ((edgerc))
+          AKAMAI_PIPELINE_EDGERC_SECTION: default
+          AKAMAI_PIPELINE_NAME: demo.a2s.ninja
+          AKAMAI_PIPELINE_ENV: prod
+          AKAMAI_PIPELINE_NETWORK: production
+          AKAMAI_PIPELINE_EMAILS: ahogg@akamai.com
+
+      - put: akamai-pipeline
+        params: {repository: akamai-pipeline-wip, rebase: true}
+        on_success:
+          put: slack-approve-prod
+          params:
+            path: slack-approve-prod
+            reply: success!
+            reply_thread: false
+        on_failure:
+          put: slack-approve-prod
+          params:
+            path: slack-approve-prod
+            reply: failed!
+            reply_thread: false
+
+resource_types:
+  - name: slack
+    type: docker-image
+    source:
+      repository: quay.io/ahelal/bender
+      tag: latest
+
+resources:
+  - name: akamai-pipeline
+    public: true
+    type: git
+    source:
+      uri: git@github.com:ynohat/akamai-pipeline-demo.git
+      branch: master
+      private_key: ((github-deploy-key))
+
+  - name: slack-approve-dev
+    public: true
+    type: slack
+    source:
+      slack_token: ((slack_token))
+      bot_name: concourse-bot
+      grammar: approve dev
+      channel: concourse
+
+  - name: slack-approve-qa
+    public: true
+    type: slack
+    source:
+      slack_token: ((slack_token))
+      bot_name: concourse-bot
+      grammar: approve qa
+      channel: concourse
+
+  - name: slack-approve-prod
+    public: true
+    type: slack
+    source:
+      slack_token: ((slack_token))
+      bot_name: concourse-bot
+      grammar: approve prod
+      channel: concourse
+

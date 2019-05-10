@@ -1,0 +1,27 @@
+{
+    "name": "ACME",
+    "children": [],
+    "behaviors": [
+        {
+            "name": "redirectplus",
+            "options": {
+                "enabled": true,
+                "destination": "{{builtin.AK_SCHEME}}://dcv.akamai.com{{builtin.AK_PATH}}",
+                "responseCode": 302
+            }
+        }
+    ],
+    "criteria": [
+        {
+            "name": "path",
+            "options": {
+                "matchOperator": "MATCHES_ONE_OF",
+                "values": [
+                    "/.well-known/acme-challenge/*"
+                ],
+                "matchCaseSensitive": false
+            }
+        }
+    ],
+    "criteriaMustSatisfy": "all"
+}

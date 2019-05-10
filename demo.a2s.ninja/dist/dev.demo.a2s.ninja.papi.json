@@ -1,0 +1,108 @@
+{
+    "rules": {
+        "name": "default",
+        "children": [
+            {
+                "name": "ACME",
+                "children": [],
+                "behaviors": [
+                    {
+                        "name": "redirectplus",
+                        "options": {
+                            "enabled": true,
+                            "destination": "{{builtin.AK_SCHEME}}://dcv.akamai.com{{builtin.AK_PATH}}",
+                            "responseCode": 302
+                        }
+                    }
+                ],
+                "criteria": [
+                    {
+                        "name": "path",
+                        "options": {
+                            "matchOperator": "MATCHES_ONE_OF",
+                            "values": [
+                                "/.well-known/acme-challenge/*"
+                            ],
+                            "matchCaseSensitive": false
+                        }
+                    }
+                ],
+                "criteriaMustSatisfy": "all"
+            }
+        ],
+        "behaviors": [
+            {
+                "name": "origin",
+                "options": {
+                    "originType": "NET_STORAGE",
+                    "netStorage": {
+                        "downloadDomainName": "ahogg.download.akamai.com",
+                        "cpCode": 479318,
+                        "g2oToken": null
+                    }
+                }
+            },
+            {
+                "name": "tieredDistribution",
+                "options": {
+                    "enabled": true
+                }
+            },
+            {
+                "name": "baseDirectory",
+                "options": {
+                    "value": "/demo.a2s.ninja/{{builtin.AK_HOST}}"
+                }
+            },
+            {
+                "name": "cacheKeyQueryParams",
+                "options": {
+                    "behavior": "IGNORE_ALL"
+                }
+            },
+            {
+                "name": "caching",
+                "options": {
+                    "behavior": "MAX_AGE",
+                    "mustRevalidate": false,
+                    "ttl": "1h"
+                }
+            },
+            {
+                "name": "downstreamCache",
+                "options": {
+                    "behavior": "BUST"
+                }
+            },
+            {
+                "name": "cacheError",
+                "options": {
+                    "enabled": true,
+                    "ttl": "30s",
+                    "preserveStale": true
+                }
+            },
+            {
+                "name": "cpCode",
+                "options": {
+                    "value": {
+                        "id": 849694
+                    }
+                }
+            },
+            {
+                "name": "mPulse",
+                "options": {
+                    "apiKey": "RQGLX-L64DH-CF9FM-4PJUA-7Z8EQ",
+                    "bufferSize": "",
+                    "enabled": true
+                }
+            }
+        ],
+        "options": {
+            "is_secure": false
+        },
+        "variables": [],
+        "comments": "The behaviors in the Default Rule apply to all requests for the property hostname(s) unless another rule overrides the Default Rule settings."
+    }
+}

@@ -1,12 +1,8 @@
 {
     "definitions": {
-        "netStorageInfo": {
-            "type": "netStorage",
-            "default": null
-        },
         "cpCode": {
             "type": "cpCode",
-            "default": null
+            "default": 849694
         }
     }
 }

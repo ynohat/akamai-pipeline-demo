@@ -1,8 +1,9 @@
 [
     {
         "cnameFrom": "prod.demo.a2s.ninja",
-        "cnameTo": "prod.demo.a2s.ninja.edgesuite.net",
+        "cnameTo": "www.demo.a2s.ninja.edgesuite.net",
         "cnameType": "EDGE_HOSTNAME",
-        "edgeHostnameId": null
+        "edgeHostnameId": 3578955,
+        "ipVersionBehavior": "IPV6_COMPLIANCE"
     }
 ]

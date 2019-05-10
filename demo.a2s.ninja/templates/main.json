@@ -1,19 +1,30 @@
 {
     "rules": {
         "name": "default",
-        "children": [],
+        "children": [
+            "#include:ACME.json"
+        ],
         "behaviors": [
             {
                 "name": "origin",
                 "options": {
                     "originType": "NET_STORAGE",
-                    "netStorage": "${env.netStorageInfo}"
+                    "netStorage": {
+                        "downloadDomainName": "ahogg.download.akamai.com",
+                        "cpCode": 479318,
+                        "g2oToken": null
+                    }
+                }
+            }, {
+                "name": "tieredDistribution",
+                "options": {
+                    "enabled": true
                 }
             },
             {
                 "name": "baseDirectory",
                 "options": {
-                    "value": "/demo/{{builtin.AK_HOST}}"
+                    "value": "/demo.a2s.ninja/{{builtin.AK_HOST}}"
                 }
             },
             {
@@ -31,17 +42,17 @@
                 }
             },
             {
+                "name": "downstreamCache",
+                "options": {
+                    "behavior": "BUST"
+                }
+            },
+            {
                 "name": "cacheError",
                 "options": {
                     "enabled": true,
                     "ttl": "30s",
                     "preserveStale": true
-                }
-            },
-            {
-                "name": "autoDomainValidation",
-                "options": {
-                    "autodv": ""
                 }
             },
             {
@@ -57,10 +68,7 @@
                 "options": {
                     "apiKey": "RQGLX-L64DH-CF9FM-4PJUA-7Z8EQ",
                     "bufferSize": "",
-                    "configOverride": "",
-                    "enabled": true,
-                    "requirePci": false,
-                    "titleOptional": ""
+                    "enabled": true
                 }
             }
         ],

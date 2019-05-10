@@ -1,0 +1,28 @@
+---
+platform: linux
+
+image_resource:
+  type: docker-image
+  source:
+    repository: lukaszczerpak/akamai-devops-labs
+
+inputs:
+  - name: akamai-pipeline
+
+outputs:
+  - name: akamai-pipeline-wip
+
+run:
+  path: ./akamai-pipeline/ci/tasks/akamai-pipeline-save.sh
+
+params:
+  GIT_NAME:
+  GIT_EMAIL:
+  # Full contents of the .edgerc file.
+  AKAMAI_PIPELINE_EDGERC:
+  # Section in the edgerc file to use.
+  AKAMAI_PIPELINE_EDGERC_SECTION:
+  # Name of the pipeline to run.
+  AKAMAI_PIPELINE_NAME:
+  # Name of the pipeline environment to run.
+  AKAMAI_PIPELINE_ENV:

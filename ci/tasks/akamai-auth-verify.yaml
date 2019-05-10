@@ -1,0 +1,21 @@
+---
+platform: linux
+
+image_resource:
+  type: docker-image
+  source:
+    repository: lukaszczerpak/akamai-devops-labs
+
+run:
+  path: sh
+  args:
+  - -exc
+  - |
+    echo $AKAMAI_PIPELINE_EDGERC > $HOME/.edgerc
+    akamai auth --section $AKAMAI_PIPELINE_SECTION verify
+
+params:
+  # Full contents of the .edgerc file.
+  AKAMAI_PIPELINE_EDGERC:
+  # Section in the edgerc file to use.
+  AKAMAI_PIPELINE_EDGERC_SECTION:
