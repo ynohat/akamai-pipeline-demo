@@ -277,8 +277,9 @@ resources:
   - name: akamai-pipeline
     public: true
     type: git
+    check_every: 10s
     source:
-      uri: git@github.com:ynohat/akamai-pipeline-demo.git
+      uri: ssh://git@github.com/ynohat/akamai-pipeline-demo.git
       branch: master
       private_key: ((github-deploy-key))
 
