@@ -8,7 +8,7 @@
         "propertyVersion": 6,
         "updatedByUser": "ji4qbugnnbzlk74x",
         "updatedDate": "2019-05-17T09:51:50Z",
-        "productionStatus": "INACTIVE",
+        "productionStatus": "ACTIVE",
         "stagingStatus": "ACTIVE",
         "etag": "4bf2487340583aae32aa5568f76b8a5a6aa4bfbd",
         "productId": "prd_SPM",
@@ -39,19 +39,19 @@
         "propertyVersion": 6,
         "updatedByUser": "ji4qbugnnbzlk74x",
         "updatedDate": "2019-05-17T09:51:50Z",
-        "productionStatus": "INACTIVE",
+        "productionStatus": "ACTIVE",
         "stagingStatus": "ACTIVE",
         "etag": "4bf2487340583aae32aa5568f76b8a5a6aa4bfbd",
         "productId": "prd_SPM",
         "ruleFormat": "v2017-06-19"
     },
     "activeIn_PRODUCTION_Info": {
-        "propertyVersion": 5,
+        "propertyVersion": 6,
         "updatedByUser": "ji4qbugnnbzlk74x",
-        "updatedDate": "2019-05-13T08:05:36Z",
+        "updatedDate": "2019-05-17T09:51:50Z",
         "productionStatus": "ACTIVE",
-        "stagingStatus": "DEACTIVATED",
-        "etag": "deac42dcb6941c573137c01ad2b9e61667eeea19",
+        "stagingStatus": "ACTIVE",
+        "etag": "4bf2487340583aae32aa5568f76b8a5a6aa4bfbd",
         "productId": "prd_SPM",
         "ruleFormat": "v2017-06-19"
     }
