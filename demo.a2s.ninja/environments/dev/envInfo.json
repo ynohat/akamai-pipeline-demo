@@ -10,15 +10,15 @@
         "updatedDate": "2019-05-15T13:27:31Z",
         "productionStatus": "INACTIVE",
         "stagingStatus": "INACTIVE",
-        "etag": "fa4269116e67d3f1c82279b0c66fdd45aaa559c8",
+        "etag": "0d18f85d17b778982e4dfef6932aade8587ba8a4",
         "productId": "prd_SPM",
         "ruleFormat": "v2017-06-19"
     },
     "suggestedRuleFormat": "v2017-06-19",
-    "environmentHash": "dfba01b8e37663223fdeeac8153d476ffe273eebc1c0623ce2b1bd2bc8c1384c",
-    "ruleTreeHash": "f9a5a3a0b2406265b5bdb8c961164433814a519cec57df055bf3e6ff86a33825",
-    "lastSavedHash": "dfba01b8e37663223fdeeac8153d476ffe273eebc1c0623ce2b1bd2bc8c1384c",
-    "lastValidatedHash": "dfba01b8e37663223fdeeac8153d476ffe273eebc1c0623ce2b1bd2bc8c1384c",
+    "environmentHash": "ef02df8d9b872fc51aa650597ada975d8c3dcf7ac47cf962d239b8d352ad1bf6",
+    "ruleTreeHash": "19eec5814f28cda7f48b02fa1fc935de2a45d843f2d6b26d180a4cf85b518046",
+    "lastSavedHash": "ef02df8d9b872fc51aa650597ada975d8c3dcf7ac47cf962d239b8d352ad1bf6",
+    "lastValidatedHash": "ef02df8d9b872fc51aa650597ada975d8c3dcf7ac47cf962d239b8d352ad1bf6",
     "lastSaveWarnings": [
         {
             "type": "https://problems.luna.akamaiapis.net/papi/v0/validation/cannot_validate",
@@ -31,17 +31,7 @@
             "detail": "The input to option Base Path of `Origin Base Path` cannot be validated because of variable expression usage. Because of the use of variables, the value of the option is only known at runtime."
         }
     ],
-    "lastSaveErrors": [
-        {
-            "type": "https://problems.luna.akamaiapis.net/papi/v0/validation/attribute_required",
-            "errorLocation": {
-                "template": "templates/main.json",
-                "variables": [],
-                "location": "rules/behaviors/1/options/tieredDistributionMap"
-            },
-            "detail": "The Tiered Distribution Map option on the `Tiered Distribution` behavior is required."
-        }
-    ],
+    "lastSaveErrors": [],
     "lastSaveHostnameErrors": [],
     "lastSaveHostnameWarnings": [],
     "lastSavedHostnamesHash": "4883f9eb9b44b897d57634a9261464c5c70ae73abdc070797f375dd81684316e",
