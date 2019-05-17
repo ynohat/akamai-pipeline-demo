@@ -18,7 +18,8 @@
             }, {
                 "name": "tieredDistribution",
                 "options": {
-                    "enabled": true
+                    "enabled": true,
+                    "tieredDistributionMap": "CH2"
                 }
             },
             {
