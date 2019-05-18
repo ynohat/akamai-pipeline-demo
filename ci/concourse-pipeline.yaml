@@ -279,7 +279,7 @@ resources:
     type: git
     check_every: 10s
     source:
-      uri: ssh://git@github.com/ynohat/akamai-pipeline-demo.git
+      uri: ssh://git@ssh.github.com:443/ynohat/akamai-pipeline-demo.git
       branch: master
       private_key: ((github-deploy-key))
 
