@@ -7,9 +7,9 @@
     "latestVersionInfo": {
         "propertyVersion": 7,
         "updatedByUser": "ji4qbugnnbzlk74x",
-        "updatedDate": "2019-05-21T08:51:33Z",
+        "updatedDate": "2019-05-21T08:51:36Z",
         "productionStatus": "INACTIVE",
-        "stagingStatus": "INACTIVE",
+        "stagingStatus": "ACTIVE",
         "etag": "3a639a196cc513eba62a20b96e943689e0b3eeef",
         "productId": "prd_SPM",
         "ruleFormat": "v2017-06-19"
@@ -36,12 +36,12 @@
     "lastSaveHostnameWarnings": [],
     "lastSavedHostnamesHash": "6a467e810a86794aa75511eb5407a1bacfe54e18acebc29b7c2250edb595e604",
     "activeIn_STAGING_Info": {
-        "propertyVersion": 6,
+        "propertyVersion": 7,
         "updatedByUser": "ji4qbugnnbzlk74x",
-        "updatedDate": "2019-05-17T09:48:53Z",
-        "productionStatus": "ACTIVE",
+        "updatedDate": "2019-05-21T08:51:36Z",
+        "productionStatus": "INACTIVE",
         "stagingStatus": "ACTIVE",
-        "etag": "e79d5d1714a2fa1c467e1c4088540a1f6492bcaa",
+        "etag": "3a639a196cc513eba62a20b96e943689e0b3eeef",
         "productId": "prd_SPM",
         "ruleFormat": "v2017-06-19"
     },
@@ -50,7 +50,7 @@
         "updatedByUser": "ji4qbugnnbzlk74x",
         "updatedDate": "2019-05-17T09:48:53Z",
         "productionStatus": "ACTIVE",
-        "stagingStatus": "ACTIVE",
+        "stagingStatus": "DEACTIVATED",
         "etag": "e79d5d1714a2fa1c467e1c4088540a1f6492bcaa",
         "productId": "prd_SPM",
         "ruleFormat": "v2017-06-19"
